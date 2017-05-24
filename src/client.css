@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+html,body, #root {
+  height: 100%;
+}
+
+
+body,
+td,
+textarea,
+input {
+/* If both this and window's overflow-x is hidden, scroll perf suffers
+   * horribly, but the sticky menubar flicker is fixed */
+/*overflow-x: hidden*/
+  font-family: Helvetica Neue, Open Sans, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #505050;
+}
+
+a {
+  color: #dd4b39;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b13c2e;
+}
+
+h1,
+h2,
+h3 {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Montserrat;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  color: #505050;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+
+.button {
+  color: #fff;
+  border-radius: 4px;
+  padding: 12px 24px;
+  background: #dd4b39;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1em;
+  font-family: Montserrat;
+  transition: background .1s ease-in;
+}
+
+.button:hover {
+  background: #e96a5b;
+  cursor: pointer;
+  color: #fff;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  margin: 0 auto;
+  background: #fbfafa;
+  border-bottom: solid 1px #e7e7e7;
+  padding: 3rem 2rem;
+}
+
+.App-title {
+  margin: 1rem auto 0;
+}
+
+.App-intro {
+  margin: 0 1rem 2.5rem; 
+}
+
+.App-logo {
+  margin: 0 auto;
+}
+
