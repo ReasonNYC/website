@@ -1,0 +1,60 @@
+.Button {
+  box-sizing: border-box;
+  
+  border-radius: 4px;
+  padding: 12px 24px;
+  
+  text-decoration: none;
+  outline: none;
+  border: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .1em;
+  font-family: Montserrat;
+  transition: background .1s ease-in;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.Button--primary {
+  color: #fff;
+  background: #dd4b39;
+  border: 1px solid #dd4b39;
+}
+
+.Button--primary:hover {
+  color: #fff;
+  background: #e96a5b;
+  border: 1px solid #e96a5b;
+}
+
+.Button--secondary {
+  color: #dd4b39;
+  border: 1px solid #dd4b39;
+}
+
+.Button--secondary:hover {
+  color: #e96a5b;
+  border: 1px solid #e96a5b;
+}
+
+.ButtonGroup > .Button {
+  display: block;
+  margin: 1rem;
+}
+
+/*.ButtonGroup > .Button {
+  display: block;
+  width: 100%;
+  margin: 1rem;
+}*/
+
+@media only screen and (min-width: 40rem) {
+  .ButtonGroup > .Button {
+    display: inline-block;
+    width: auto;
+  }
+}

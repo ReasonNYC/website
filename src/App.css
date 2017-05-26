@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+}
+
+.App__section {
+  padding: 3rem 0;
+}
+
+.App__header {
+  margin: 0 auto;
+  background: #F6F4F4;
+  border-bottom: solid 1px #e7e7e7;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.App__logo {
+  margin: 0 auto;
+  position: relative;
+  z-index: 400;
+  width: 100%;
+  max-width: 525px;
+  height: auto;
+  padding: 0 1rem;
+}
+
+.App__subtitle {
+  color: #999;
+  position: relative;
+  margin: 1rem auto 0;
+  z-index: 400;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.App__intro {
+  margin: 0 1rem 1rem; 
+}
+
+.App__events {
+  background: #fbfafa;
+  border-bottom: solid 1px #e7e7e7;
+  border-top: solid 1px #e7e7e7;
+}
+
+.App__events-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}

@@ -1,6 +1,7 @@
 const App = require('../lib/js/src/app').comp;
 
 import React from 'react';
+import axios from 'axios';
 import compression from 'compression';
 import express from 'express';
 import helmet from 'helmet';
@@ -8,6 +9,7 @@ import hpp from 'hpp';
 import morgan from 'morgan';
 import path from 'path';
 import { renderToString } from 'react-dom/server';
+import serialize from 'serialize-javascript';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -15,30 +17,79 @@ const server = express();
 
 server
   .disable('x-powered-by')
-  .use(morgan('dev'))
+  .use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'))
   .use(helmet())
   .use(hpp())
   .use(compression())
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
-  .get('/*', (req, res) => {
-    const markup = renderToString(React.createElement(App));
-    res.send(
-      `<!doctype html>
+  .get('/*', async function renderApp(req, res) {
+    try {
+      const { data } = await axios.get(
+        'https://api.meetup.com/ReasonML-NYC/events?photo-host=secure&page=20&sig_id=118784732&sig=b5941528d2ee47f1de6d00684f7fc2100efa252b'
+      );
+      const events = data.map(e => ({
+            title: e.name,
+            description: e.description,
+            time: e.time,
+            link: e.link,
+            id: e.id,
+            venue: `${e.venue.name}, ${e.venue.address_1}, ${e.venue.city}, ${e.venue.state} ${e.venue.zip}`,
+            lat: e.venue.lat,
+            lon: e.venue.lon
+          }));
+      const markup = renderToString(
+        React.createElement(App, {
+          events,
+        })
+      );
+      res.send(
+        `<!doctype html>
     <html lang="en">
     <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta charSet='utf-8' />
         <title>ReasonML NYC</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="We are the ReasonML community in NYC">
+        <meta name="keywords" content="reason,reasonml,react,new york,nyc,2017,red badger,facebook">
+        <link rel="shortcut icon" href="/favicon.ico">
+        
+        <meta name="theme-color" content="#dd4b39">
+        
+        <!-- Disable tap highlight on IE -->
+        <meta name="msapplication-tap-highlight" content="no">
+
+        <!-- Web Application Manifest -->
+        <link rel="manifest" href="/manifest.json">
+
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="ReasonML NYC">
+        <link rel="icon" sizes="192x192" href="/icon-192x192.png">
+
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="ReasonML NYC">
+        <link rel="apple-touch-icon" href="/icon-144x144-precomposed.png">
+
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="/icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#F6F4F4">
+
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         ${assets.client.css ? `<link rel="stylesheet" href="${assets.client.css}">` : ''}
         <script src="${assets.client.js}" defer></script>
     </head>
     <body>
-        <div id="root"></div>
+        <div id="root">${markup}</div>
+        <script>window.__DATA__ = ${serialize({ events })};</script>
     </body>
 </html>`
-    );
+      );
+    } catch (e) {
+      console.log(e);
+    }
   });
 
 export default server;

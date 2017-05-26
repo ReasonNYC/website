@@ -1,0 +1,36 @@
+{
+  "short_name": "ReasonML NYC",
+  "name": "ReasonML NYC",
+  "description": "We are the ReasonML community in NYC",
+  "icons": [
+    {
+      "src": "icon-144x144-precomposed.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#dd4b39",
+  "background_color": "#F6F4F4"
+}

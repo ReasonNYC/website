@@ -1,0 +1,16 @@
+.Wrapper {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.Wrapper--sm {
+  max-width: 30rem;
+}
+
+.Wrapper--lg {
+  max-width: 50rem;
+}
+
+.Wrapper--xl {
+  max-width: 70rem;
+}
