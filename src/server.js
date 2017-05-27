@@ -77,6 +77,19 @@ server
         <meta name="msapplication-TileImage" content="/icon-144x144-precomposed.png">
         <meta name="msapplication-TileColor" content="#F6F4F4">
 
+        <meta property="og:url" content="https://reason.nyc">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="ReasonML NYC">
+        <meta property="og:image" content="https://reason.nyc/og_image.png">
+        <meta property="og:description" content="We are the ReasonML community in NYC">
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@NYCReasonML"/>
+        <meta name="twitter:title" content="ReasonML NYC"/>
+        <meta name="twitter:description" content="We are the ReasonML community in NYC">
+        <meta name="twitter:image" content="https://reason.nyc/twitter_card.png">
+
+
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         ${assets.client.css ? `<link rel="stylesheet" href="${assets.client.css}">` : ''}
         <script src="${assets.client.js}" defer></script>
