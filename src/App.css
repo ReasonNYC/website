@@ -48,3 +48,12 @@
   padding: 0;
   text-align: left;
 }
+
+.App__footer {
+  background: #444;
+  color: #e2e1e1;
+}
+
+.App__footer a {
+  color: #e2e1e1;
+}
