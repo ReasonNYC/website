@@ -6,6 +6,10 @@
   padding: 3rem 0;
 }
 
+.App__section-title--small {
+  margin: 0 auto 2rem;
+}
+
 .App__header {
   margin: 0 auto;
   background: #F6F4F4;

@@ -76,10 +76,9 @@ module App = {
       </div>
       <div className="App__sponsors App__section">
         <Wrapper width="sm">
-            (ReactRe.stringToElement "Proudly sponsored by")
-        </Wrapper>
-        <Wrapper width="sm">
-            <svg width="96px" height="120px" viewBox="0 0 1163 1442">
+            <h2 className="App__section-title--small">(ReactRe.stringToElement "Sponsored by")</h2>
+            <a href="https://www.shellypalmer.com" target="_blank" rel="noopener">
+              <svg width="96px" height="120px" viewBox="0 0 1163 1442">
                 <g id="Final" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                     <g id="light_lockup" transform="translate(-440.000000, -291.000000)">
                         <g id="Group" transform="translate(440.000000, 320.000000)">
@@ -88,7 +87,8 @@ module App = {
                         </g>
                     </g>
                 </g>
-            </svg>
+              </svg>
+            </a>
         </Wrapper>
       </div>
       <div className="App__footer App__section">
@@ -97,11 +97,15 @@ module App = {
           <a href="https://twitter.com/NYCReasonML" target="_blank" rel="noopener">(ReactRe.stringToElement "Twitter")</a>  (ReactRe.stringToElement " | ")
           <a href="https://www.meetup.com/ReasonML-NYC/" target="_blank" rel="noopener">(ReactRe.stringToElement "Meetup")</a>  (ReactRe.stringToElement " | ")
           <a href="mailto:jared@palmer.net" target="_blank" rel="noopener">(ReactRe.stringToElement "Contact")</a>
+          
         </Wrapper>
-        <div>
-          <small>(ReactRe.stringToElement "Copyright 2017 ")<a href="https://www.shellypalmer.com" target="_blank" rel="noopener">(ReactRe.stringToElement "The Palmer Group.")</a>(ReactRe.stringToElement " All Rights Reserved.")</small>
-        </div>
+        <Wrapper width="sm">
+          <div>
+            <small>(ReactRe.stringToElement "Copyright 2017 ")<a href="https://www.shellypalmer.com" target="_blank" rel="noopener">(ReactRe.stringToElement "The Palmer Group.")</a>(ReactRe.stringToElement " All Rights Reserved.")</small>
+          </div>
+        </Wrapper>
       </div>
+      
     </div>;
   };
     /* Tell Reason-React how to transform JS props into ReasonML */
