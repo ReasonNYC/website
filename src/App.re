@@ -1,15 +1,84 @@
 
 module App = {
-  /* Include the JS interop so we can pass props from JS */
+  /** 
+   * We are injecting React props from JavaScript inside server.js and client.js
+   * So we include the JsProps interop.
+   */
   include ReactRe.Component.JsProps;
+
+  /** Every ReactRe component needs a `name` (think getDisplayName) */
   let name = "App";
-  type event = Js.t {. id: string, title: string, description: string, time: float, link: string};
-  type props = {events: array event};
+
+  /** 
+   * We need to add types for our Meetup.com event items. For simplicity, we 
+   * are going to type it as a JS object and not as Reason/OCaml record.
+   */
+  type event = Js.t {.
+    /* Unique identifier*/
+    id: string,
+    /* Name of the Event */
+    title: string,
+    /* Description */
+    description: string,
+    /* Start time */
+    time: float,
+    /* Url to Meetup.com event */
+    link: string
+  };
+
+  /**
+   * Declare type of our component's props
+   */
+  type props = {
+    /* An array of Meetup.com events */
+    events: array event
+  };
+
+  /**
+   * Render functions in ReactRe look slighly different than in ReactJS. 
+   * If we were in ReactJS land, they would look something like this...
+   * 
+   * ```js
+   * render () {
+   *  ..do stuff
+   *  return (
+   *   <div>
+   *     ...more JSX
+   *   </div>
+   *  );
+   * }
+   * ```
+   * 
+   * However, Reason (and ReactRe) automatically returns the expression.
+   * So we don't need to write out `return (..)`. We can just include our 
+   * component's JSX and a semicolon and be done.
+   */
   let render {props} => {
+    /** 
+     * In order to handle child as arrays in ReactJS we could do something
+     * like this...
+     * 
+     * ```
+     * render () {
+     *  const events = this.props.map(event => <EventItem key={event.id} ... />)
+     *  return (
+     *   ...other jsx
+     *    {events}
+     *   ... 
+     *  )
+     * }
+     * ```
+     * In ReactRe, we follow a similar pattern:
+     */
     let events =
       props.events |>
         Array.map (
           fun event => 
+            /**
+             * Since we decided (for simplicity) to type our injected Meetup events
+             * as JS objects (on line 16) instead of OCaml/Reason records, 
+             * we use ## syntax instead of . syntax to access object fields.
+             */
             <EventItem 
               key=event##id
               id=event##id
@@ -19,9 +88,12 @@ module App = {
               time=event##time
             />
           );
+    
     <div className="App">
       <div className="App__header App__section"> 
           /*<ParticlesRe show=true />*/
+
+          /* SVG's just work */
           <svg className="App__logo" viewBox="0 0 1050 402" >
             <path d="M203.691,71.0391 C191.1816,81.3054 182.6814,95.6001 179.6643,111.444 C189.4152,143.7867 144.8553,135.3798 151.881,111.306 C152.538,106.3587 153.5592,101.4663 154.9371,96.6678 L147.4356,96.6678 C129.9351,96.6678 113.1516,89.7567 100.77675,77.4552 C88.40205,65.1534 81.45,48.4689 81.45,31.0719 L81.45,0 L112.7064,0 C128.7615,0.0525483 144.2439,5.93442 156.2424,16.53942 C168.2406,27.14445 175.9278,41.742 177.8586,57.5865 C186.9291,48.1275 197.8347,40.5951 209.9163,35.4444 C221.9982,30.2937 235.005,27.6318 248.1507,27.61935 L248.1507,55.2387 C231.9294,55.1832 216.2001,60.7731 203.691,71.0391 Z" id="path0_fill" fill="#4B3737" />
             <path d="M178.8975,111.44421 C205.6287,100.69473 235.5162,100.69473 262.2477,111.44421 L262.2477,111.72042 C275.8593,117.16539 288.2517,125.2359 298.7097,135.4662 C309.168,145.6968 317.484,157.8846 323.181,171.3267 C328.875,184.7685 331.836,199.1988 331.893,213.7845 C331.95,228.3699 329.1,242.8224 323.511,256.3077 L281.835,359.0517 C276.6096,371.7741 267.6846,382.6572 256.2018,390.3081 C244.719,397.959 231.2007,402.03 217.3773,402 C208.4688,401.9685 199.6494,400.2339 191.4,396.8904 L165.8394,386.6712 L140.1396,396.4761 C123.063,403.3428 103.9413,403.185 86.9817,396.0372 C70.0218,388.8894 56.613,375.3369 49.7046,358.3614 L8.02941,255.6174 C-0.0502407,235.6506 -2.08737,213.7725 2.168235,192.6705 C6.42384,171.5688 16.78689,152.1621 31.9845,136.8345 C47.1819,121.5066 66.552,110.9253 87.7155,106.3902 C108.879,101.855085 130.914,103.563701 151.1142,111.30612 C153.6549,115.40313 178.8975,118.46016 178.8975,111.44421 Z" id="path1_fill" fill="#CC5643" />
@@ -38,10 +110,14 @@ module App = {
             <path d="M159.6978,339.4245 L145.7697,312.9381 L145.2234,312.9381 L127.1988,312.9381 L127.1988,339.4245 L102.21,339.4245 L102.21,243.7182 L145.2234,243.7182 C157.8771,243.7182 167.6634,246.676311 174.582,252.59253 C181.5915,258.41775 185.0964,266.65494 185.0964,277.3041 C185.0964,284.4945 183.6399,290.7294 180.7266,296.0085 C177.8136,301.1967 173.5806,305.247 168.0276,308.1597 L187.9638,339.4245 L159.6978,339.4245 Z M127.1988,293.0049 L145.3599,293.0049 C150.4578,293.0049 154.3725,291.7308 157.1034,289.182 C159.9255,286.6335 161.3364,282.9474 161.3364,278.1234 C161.3364,273.48138 159.9255,269.93163 157.1034,267.47412 C154.3725,264.92559 150.4578,263.65134 145.3599,263.65134 L127.1988,263.65134 L127.1988,293.0049 Z" id="path11_fill" fill="#FFFFFF" /> 
           </svg>
           <h2 className="App__subtitle">
+            /*  
+             * In ReactRe, we have to wrap all of our strings with a ReactRe.stringToElement
+             * function.
+             */
             (ReactRe.stringToElement "NYC's ReasonML Meetup")
           </h2>
       </div>
-      <Wrapper width="lg">
+      <div className="Wrapper Wrapper--lg">
         <div className="App__cta App__section">
           <h2>(ReactRe.stringToElement "Join us at our monthly meetup")</h2>
           <p className="App__intro lead">
@@ -67,15 +143,15 @@ module App = {
             </a>
           </div>
         </div>
-      </Wrapper>
-      <div className="App__events">
-        <Wrapper width="lg">
+      </div>
+      <div className="App__events App__section">
+        <div className="Wrapper Wrapper--lg">
           <h2>(ReactRe.stringToElement "Upcoming Events")</h2>
           <ul className="App__events-list">(ReactRe.arrayToElement events)</ul>
-        </Wrapper>
+        </div>
       </div>
       <div className="App__sponsors App__section">
-        <Wrapper width="sm">
+        <div className="Wrapper Wrapper--sm">
             <h2 className="App__section-title--small">(ReactRe.stringToElement "Sponsored by")</h2>
             <a href="https://www.shellypalmer.com" target="_blank" rel="noopener">
               <svg width="96px" height="120px" viewBox="0 0 1163 1442">
@@ -89,23 +165,39 @@ module App = {
                 </g>
               </svg>
             </a>
-        </Wrapper>
+        </div>
+      </div>
+      <div className="App__signup App__section">
+        <div className="Wrapper Wrapper--md">
+          <h2>(ReactRe.stringToElement "Stay Tuned")</h2>
+          <p className="App__intro lead">(ReactRe.stringToElement "Get reminders and event information about ReasonML NYC events straight to your inbox.")</p>
+          <form className="EmailSignup" action="//nyc.us16.list-manage.com/subscribe/post?u=9e5e8d2b41a6487a0615d18c9&amp;id=cdf4de8b1c" method="POST">
+            <label htmlFor="MERGE0">(ReactRe.stringToElement "Email Address")</label>
+            /**
+              * In Reason/OCaml,`type` is reserved word. Therefore `<input type=""/>` 
+              * is syntactically invalid. So we use `<input _type=".." />` instead.
+              * 
+              * @see https://github.com/reasonml/reason-react/blob/master/documentation.md#invalid-prop-name
+              * @see http://bloomberg.github.io/bucklescript/Manual.html#_object_label_translation_convention
+              */
+            <input _type="email" placeholder="name@address.com" className="Input EmailSignup__Input"  name="MERGE0" id="MERGE0"  />
+            <input _type="submit" value="Get Updates" className="Button Button--primary Button--inEmailSignup" />
+          </form>
+        </div>
       </div>
       <div className="App__footer App__section">
-        <Wrapper width="sm">
+        <div className="Wrapper Wrapper--sm">
           <a href="https://github.com/reasonmlnyc" target="_blank" rel="noopener">(ReactRe.stringToElement "GitHub")</a> (ReactRe.stringToElement " | ") 
           <a href="https://twitter.com/NYCReasonML" target="_blank" rel="noopener">(ReactRe.stringToElement "Twitter")</a>  (ReactRe.stringToElement " | ")
           <a href="https://www.meetup.com/ReasonML-NYC/" target="_blank" rel="noopener">(ReactRe.stringToElement "Meetup")</a>  (ReactRe.stringToElement " | ")
           <a href="mailto:hello@reason.nyc" target="_blank" rel="noopener">(ReactRe.stringToElement "Contact")</a>
-          
-        </Wrapper>
-        <Wrapper width="sm">
+        </div>
+        <div className="Wrapper Wrapper--sm">
           <div>
             <small>(ReactRe.stringToElement "Copyright 2017 ")<a href="https://www.shellypalmer.com" target="_blank" rel="noopener">(ReactRe.stringToElement "The Palmer Group.")</a>(ReactRe.stringToElement " All Rights Reserved.")</small>
           </div>
-        </Wrapper>
+        </div>
       </div>
-      
     </div>;
   };
     /* Tell Reason-React how to transform JS props into ReasonML */

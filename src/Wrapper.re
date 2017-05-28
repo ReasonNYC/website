@@ -1,3 +1,7 @@
+/**
+ * Not Used, just for an example.
+ * This is Stateless Functional Component equivalent that is just for CSS.
+ */
 module Wrapper = {
   include ReactRe.Component;
   let name = "Wrapper";

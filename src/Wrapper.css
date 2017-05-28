@@ -7,6 +7,10 @@
   max-width: 30rem;
 }
 
+.Wrapper--md {
+  max-width: 40rem;
+}
+
 .Wrapper--lg {
   max-width: 50rem;
 }

@@ -3,7 +3,7 @@
 }
 
 .App__section {
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
 }
 
 .App__section-title--small {
@@ -60,4 +60,45 @@
 
 .App__footer a {
   color: #e2e1e1;
+}
+
+.App__signup {
+  border-top: solid 1px #e7e7e7;
+  background: #F6F4F4;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: .9rem;
+  font-weight: bold;
+  margin-bottom: .25rem;
+}
+
+.Input {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  background: #fff;
+}
+
+.EmailSignup {
+  text-align: left;
+  margin-top: 2rem;
+  display: block;
+}
+
+.EmailSignup__Input {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (min-width: 40rem) {
+  .EmailSignup__Input {
+    margin-bottom: 0;
+    max-width: 550px;
+    width: calc(100% - 210px);
+  }
 }

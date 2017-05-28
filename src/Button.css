@@ -3,7 +3,7 @@
   
   border-radius: 4px;
   padding: 12px 24px;
-  
+  line-height: 1;
   text-decoration: none;
   outline: none;
   border: 0;
@@ -46,15 +46,13 @@
   margin: 1rem;
 }
 
-/*.ButtonGroup > .Button {
-  display: block;
-  width: 100%;
-  margin: 1rem;
-}*/
-
 @media only screen and (min-width: 40rem) {
   .ButtonGroup > .Button {
     display: inline-block;
     width: auto;
   }
+}
+
+.Button--inEmailSignup {
+  float: right;
 }
