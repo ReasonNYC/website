@@ -59,7 +59,7 @@ module App = {
             </a>
             <a
               className="Button Button--secondary" 
-              href="mailto:jared@palmer.net?subject=ReasonMLNYC - Speaker Request"
+              href="mailto:hello@reason.nyc?subject=ReasonMLNYC - Speaker Request"
               target="_blank"
               rel="noopener"
             > 
@@ -96,7 +96,7 @@ module App = {
           <a href="https://github.com/reasonmlnyc" target="_blank" rel="noopener">(ReactRe.stringToElement "GitHub")</a> (ReactRe.stringToElement " | ") 
           <a href="https://twitter.com/NYCReasonML" target="_blank" rel="noopener">(ReactRe.stringToElement "Twitter")</a>  (ReactRe.stringToElement " | ")
           <a href="https://www.meetup.com/ReasonML-NYC/" target="_blank" rel="noopener">(ReactRe.stringToElement "Meetup")</a>  (ReactRe.stringToElement " | ")
-          <a href="mailto:jared@palmer.net" target="_blank" rel="noopener">(ReactRe.stringToElement "Contact")</a>
+          <a href="mailto:hello@reason.nyc" target="_blank" rel="noopener">(ReactRe.stringToElement "Contact")</a>
           
         </Wrapper>
         <Wrapper width="sm">
