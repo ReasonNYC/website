@@ -81,6 +81,7 @@ label {
   padding: 8px 16px;
   font-size: 16px;
   background: #fff;
+  -webkit-appearance: none;
 }
 
 .EmailSignup {
