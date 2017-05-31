@@ -28,15 +28,15 @@ server
         'https://api.meetup.com/ReasonML-NYC/events?photo-host=secure&page=20&sig_id=118784732&sig=b5941528d2ee47f1de6d00684f7fc2100efa252b'
       );
       const events = data.map(e => ({
-            title: e.name,
-            description: e.description,
-            time: e.time,
-            link: e.link,
-            id: e.id,
-            venue: `${e.venue.name}, ${e.venue.address_1}, ${e.venue.city}, ${e.venue.state} ${e.venue.zip}`,
-            lat: e.venue.lat,
-            lon: e.venue.lon
-          }));
+        title: e.name,
+        description: e.description,
+        time: e.time,
+        link: e.link,
+        id: e.id,
+        venue: `${e.venue.name}, ${e.venue.address_1}, ${e.venue.city}, ${e.venue.state} ${e.venue.zip}`,
+        lat: e.venue.lat,
+        lon: e.venue.lon,
+      }));
       const markup = renderToString(
         React.createElement(App, {
           events,

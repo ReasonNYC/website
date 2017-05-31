@@ -1,4 +1,3 @@
-
 module EventItem = {
   include ReactRe.Component;
   type props = {title: string, time: float, description: string, link: string, id: string};
@@ -14,11 +13,17 @@ module EventItem = {
           (ReactRe.stringToElement props.title)
         </a>
       </h3>
-      <time className="EventItem-date">(ReactRe.stringToElement (Js.Date.toLocaleString (Js.Date.fromFloat props.time)))</time>  
-      <div className="EventItem-description" dangerouslySetInnerHTML={"__html": props.description} />
+      <time className="EventItem-date">
+        (ReactRe.stringToElement (Js.Date.toLocaleString (Js.Date.fromFloat props.time)))
+      </time>
+      <div
+        className="EventItem-description"
+        dangerouslySetInnerHTML={"__html": props.description}
+      />
     </li>;
 };
 
 include ReactRe.CreateComponent EventItem;
 
-let createElement ::title ::time ::description ::link ::id => wrapProps {title,  time, description, link, id};
+let createElement ::title ::time ::description ::link ::id =>
+  wrapProps {title, time, description, link, id};
