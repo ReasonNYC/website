@@ -2,14 +2,14 @@
  * Not Used, just for an example.
  * This is Stateless Functional Component equivalent that is just for CSS.
  */
-module HomeNew = {
+module About = {
   include ReactRe.Component;
-  let name = "HomeNew";
+  let name = "About";
   type props = unit;
   let render _ =>
     <div> (ReactRe.stringToElement "About") </div>;
 };
 
-include ReactRe.CreateComponent HomeNew;
+include ReactRe.CreateComponent About;
 
 let createElement = wrapProps ()
