@@ -6,17 +6,18 @@ import './Button.css';
 import './EventItem.css';
 
 import BrowserRouter from 'react-router-dom/BrowserRouter';
-import Particles from './Particles';
 import React from 'react';
 import registerServiceWorker from './registerServiceWorker';
 import { render } from 'react-dom';
 
 const App = require('../lib/js/src/app').comp;
 
+const initialState = window.__DATA__;
+
 render(
-  React.createElement(BrowserRouter, {
-    children: React.createElement(App, window.__DATA__),
-  }),
+  <BrowserRouter>
+    <App {...initialState} />
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
