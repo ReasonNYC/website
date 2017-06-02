@@ -13,7 +13,17 @@ module Route = {
 };
 
 module NavLink = {
-  let createElement _to::(_to: string) => ReactRe.wrapPropsShamelessly navLink {"to": _to};
+  let createElement
+      _to::(_to: string)
+      activeClassName::(activeClassName: option string)=?
+      className::(className: option string)=? =>
+    ReactRe.wrapPropsShamelessly
+      navLink
+      {
+        "activeClassName": Js.Null_undefined.from_opt activeClassName,
+        "className": Js.Null_undefined.from_opt className,
+        "to": _to
+      };
 };
 
 module BrowserRouter = {
