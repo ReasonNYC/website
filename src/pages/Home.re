@@ -1,5 +1,6 @@
-open ReactRouter;
 open Event;
+
+
 /**
  * Not Used, just for an example.
  * This is Stateless Functional Component equivalent that is just for CSS.
@@ -7,10 +8,10 @@ open Event;
 module HomeNew = {
   include ReactRe.Component;
   let name = "HomeNew";
-  type props = { events: array event };
+  type props = {events: array event};
   let render {props} => {
     Js.log props;
-    
+
     /**
      * In order to handle child as arrays in ReactJS we could do something
      * like this...
@@ -252,7 +253,6 @@ module HomeNew = {
       </div>
     </div>
   };
-
 };
 
 include ReactRe.CreateComponent HomeNew;

@@ -6,10 +6,9 @@ module About = {
   include ReactRe.Component;
   let name = "About";
   type props = unit;
-  let render _ =>
-    <div> (ReactRe.stringToElement "About") </div>;
+  let render _ => <div> (ReactRe.stringToElement "About") </div>;
 };
 
 include ReactRe.CreateComponent About;
 
-let createElement = wrapProps ()
+let createElement = wrapProps ();
