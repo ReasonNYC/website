@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src/app.re renders 1`] = `
+<li
+  className="EventItem"
+>
+  <h3
+    className="EventItem-title"
+  >
+    <a
+      href="https://google.com"
+      rel="noopener"
+      target="_blank"
+    >
+      Foo Title
+    </a>
+  </h3>
+  <time
+    className="EventItem-date"
+  >
+    1969-12-31 22:07:14
+  </time>
+  <div
+    className="EventItem-description"
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "Hello World!",
+      }
+    }
+  />
+</li>
+`;
