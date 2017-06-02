@@ -1,10 +1,6 @@
 open ReactRouter;
 open Event;
 
-let createView view events _ => <View view events />;
-
-type routeConfig = { path: string, view: unit => ReactRe.reactElement, events: array event };
-
 module App = {
   include ReactRe.Component.JsProps;
   let name = "App";
@@ -15,25 +11,20 @@ module App = {
   };
 
   let render {props} => {
-    let routes = [
-      { path: "/", view: fun _ => <HomeNew />, events: props.events  },
-      { path: "/about", view: fun _ => <About />, events: props.events },
-    ];
-    <div> (
-          ReactRe.listToElement (
-            List.map
-              (
-                fun a =>
-                  <Route
-                    key=a.path
-                    path=a.path
-                    component=(createView a.view props.events)
-                    exact=true
-                  />
-              )
-              routes
-          )
-        ) </div>;
+    <div>
+      <NavLink _to="/about">(ReactRe.stringToElement "About")</NavLink>
+      <NavLink _to="/">(ReactRe.stringToElement "Home")</NavLink>
+      <Route
+        path="/"
+        component=(fun _ => <Home events=props.events />)
+        exact=true
+      /> 
+      <Route
+        path="/about"
+        component=(fun _ => <About /> )
+        exact=true
+      /> 
+    </div>;
   };
 
   /* Tell Reason-React how to transform JS props into ReasonML */

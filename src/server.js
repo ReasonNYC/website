@@ -8,8 +8,9 @@ import hpp from 'hpp';
 import morgan from 'morgan';
 import path from 'path';
 import { renderToString } from 'react-dom/server';
-import routes from './routes';
 import serialize from 'serialize-javascript';
+
+const App = require('../lib/js/src/app').comp;
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -37,15 +38,15 @@ server
         lat: e.venue.lat,
         lon: e.venue.lon,
       }));
-      // const markup = renderToString(
-      //   React.createElement(StaticRouter, {
-      //     context: {},
-      //     location: req.url,
-      //     children: React.createElement(App, {
-      //       routes,
-      //     }),
-      //   })
-      // );
+      const markup = renderToString(
+        React.createElement(StaticRouter, {
+          context: {},
+          location: req.url,
+          children: React.createElement(App, {
+            events,
+          }),
+        })
+      );
       res.send(
         `<!doctype html>
     <html lang="en">
@@ -99,7 +100,7 @@ server
         <script src="${assets.client.js}" defer></script>
     </head>
     <body>
-        <div id="root"></div>
+        <div id="root">${markup}</div>
         <script>window.__DATA__ = ${serialize({ events })};</script>
     </body>
 </html>`

@@ -19,6 +19,7 @@ render(
   }),
   document.getElementById('root')
 );
+
 registerServiceWorker();
 
 if (module.hot) {

@@ -7,7 +7,7 @@ module HomeNew = {
   let name = "HomeNew";
   type props = unit;
   let render _ =>
-    <div> (ReactRe.stringToElement "Home") </div>;
+    <div> (ReactRe.stringToElement "About") </div>;
 };
 
 include ReactRe.CreateComponent HomeNew;
