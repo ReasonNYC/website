@@ -10,12 +10,7 @@ module App = {
     events: array event
   };
   let render {props} =>
-    <div>
-      <NavLink _to="/about"> (ReactRe.stringToElement "About") </NavLink>
-      <NavLink _to="/"> (ReactRe.stringToElement "Home") </NavLink>
-      <Route path="/" component=(fun _ => <Home events=props.events />) exact=true />
-      <Route path="/about" component=(fun _ => <About />) exact=true />
-    </div>;
+    <div> <Route path="/" component=(fun _ => <Home events=props.events />) exact=true /> </div>;
   /* Tell Reason-React how to transform JS props into ReasonML */
   type jsProps = Js.t {. events : array event};
   let jsPropsToReasonProps = Some (fun jsProps => {events: jsProps##events});
