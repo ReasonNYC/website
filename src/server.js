@@ -25,6 +25,7 @@ server
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get('/*', async function renderApp(req, res) {
     try {
+      const context = {};
       const { data } = await axios.get(
         'https://api.meetup.com/ReasonML-NYC/events?photo-host=secure&page=20&sig_id=118784732&sig=b5941528d2ee47f1de6d00684f7fc2100efa252b'
       );
@@ -39,13 +40,9 @@ server
         lon: e.venue.lon,
       }));
       const markup = renderToString(
-        React.createElement(StaticRouter, {
-          context: {},
-          location: req.url,
-          children: React.createElement(App, {
-            events,
-          }),
-        })
+        <StaticRouter context={context} location={req.url}>
+          <App events={events} />
+        </StaticRouter>
       );
       res.send(
         `<!doctype html>
