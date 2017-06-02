@@ -13,3 +13,6 @@ public/static
 .env.production.local
 lib
 .merlin
+
+
+src/components/**/*.js
