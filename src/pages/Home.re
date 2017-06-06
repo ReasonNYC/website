@@ -24,13 +24,6 @@ let speakers: list speaker = [
     twitter: "https://twitter.com/ken_wheeler",
     github: "https://github.com/kenwheeler",
     linkedin: ""
-  }, {
-    name: "Maxime Ransan",
-    company: "Bloomberg",
-    avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/07b/1e4/380bc25.jpg",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/maxime-ransan-90b139b/",
-    github: "https://github.com/mransan"
   }
 ];
 /**
@@ -278,7 +271,7 @@ module Home = {
       </div>
       <div className="Home__footer Home__section">
         <div className="Wrapper Wrapper--sm">
-          <a href="https://github.com/reasonmlnyc" target="_blank" rel="noopener">
+          <a href="https://github.com/reasonnyc" target="_blank" rel="noopener">
             (ReactRe.stringToElement "GitHub")
           </a>
           (ReactRe.stringToElement " | ")
