@@ -1,0 +1,24 @@
+.Icon {
+  height: 24px;
+  width: 24px;
+  fill: #555;
+  opacity: 1;
+  will-change: opacity;
+  transform: all 300ms ease-in;
+}
+
+a > .Icon:hover {
+  opacity: .5;
+}
+
+.Icon--twitter {
+  fill: #55acee;
+}
+
+.Icon--github {
+  fill: #000;
+}
+
+.Icon--linkedin {
+  fill: #0077b5;
+}

@@ -2,18 +2,14 @@
   box-sizing: border-box;
 }
 
-html,body, #root {
+html, body, #root {
   height: 100%;
 }
 
-
-body,
-td,
-textarea,
-input {
-/* If both this and window's overflow-x is hidden, scroll perf suffers
+body, td, textarea, input {
+  /* If both this and window's overflow-x is hidden, scroll perf suffers
    * horribly, but the sticky menubar flicker is fixed */
-/*overflow-x: hidden*/
+  /*overflow-x: hidden*/
   font-family: Helvetica Neue, Open Sans, sans-serif;
   line-height: 1.6;
   font-size: 16px;
@@ -29,9 +25,7 @@ a:hover {
   color: #b13c2e;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-family: Montserrat;
