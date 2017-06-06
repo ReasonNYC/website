@@ -1,57 +1,68 @@
 open Event;
 
+type speaker = {
+  name: string,
+  avatar: string,
+  company: string,
+  github: string,
+  twitter: string,
+  linkedin: string
+};
 
+let speakers: list speaker = [
+  {
+    name: "Jared Palmer",
+    company: "The Palmer Group",
+    avatar: "https://pbs.twimg.com/profile_images/662984079638405120/Y6oncSaf.jpg",
+    twitter: "jaredpalmer",
+    github: "jaredpalmer",
+    linkedin: ""
+  }, {
+    name: "Ken Wheeler",
+    company: "Formidable Labs",
+    avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkiAAAAJDYzNzQ1NWFiLWYwYzQtNDZmNi1iZDBlLWYxNWExMTBkMTYzYQ.jpg",
+    twitter: "ken_wheeler",
+    github: "kenwheeler",
+    linkedin: ""
+  }, {
+    name: "Maxime Ransan",
+    company: "Bloomberg",
+    avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/07b/1e4/380bc25.jpg",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/maxime-ransan-90b139b/",
+    github: "mransan"
+  }
+];
 /**
  * Not Used, just for an example.
  * This is Stateless Functional Component equivalent that is just for CSS.
  */
-module HomeNew = {
+module Home = {
   include ReactRe.Component;
-  let name = "HomeNew";
+  let name = "Home";
   type props = {events: array event};
   let render {props} => {
-    Js.log props;
+     let speakerList =
+        speakers |>
+          List.map (
+            fun s =>
+              <Speaker 
+                key=s.company
+                avatar=s.avatar
+                company=s.company
+                name=s.name
+                linkedin=s.linkedin
+                github=s.github
+                twitter=s.twitter
+              />
+          );
 
-    /**
-     * In order to handle child as arrays in ReactJS we could do something
-     * like this...
-     *
-     * ```
-     * render () {
-     *  const events = this.props.map(event => <EventItem key={event.id} ... />)
-     *  return (
-     *   ...other jsx
-     *    {events}
-     *   ...
-     *  )
-     * }
-     * ```
-     * In ReactRe, we follow a similar pattern:
-     */
-    let events =
-      props.events |>
-      Array.map (
-        fun event =>
-          /**
-           * Since we decided (for simplicity) to type our injected Meetup events
-           * as JS objects (on line 16) instead of OCaml/Reason records,
-           * we use ## syntax instead of . syntax to access object fields.
-           */
-          <EventItem
-            key=event##id
-            id=event##id
-            title=event##title
-            description=event##description
-            link=event##link
-            time=event##time
-          />
-      );
-    <div className="App">
-      <div className="App__header App__section">
+    <div className="Home">
+      <div className="Home__header Home__section">
         /*<ParticlesRe show=true />*/
         /* SVG's just work */
 
-          <svg className="App__logo" viewBox="0 0 1050 402">
+          <svg className="Home__logo" viewBox="0 0 1050 402">
             <path
               d="M203.691,71.0391 C191.1816,81.3054 182.6814,95.6001 179.6643,111.444 C189.4152,143.7867 144.8553,135.3798 151.881,111.306 C152.538,106.3587 153.5592,101.4663 154.9371,96.6678 L147.4356,96.6678 C129.9351,96.6678 113.1516,89.7567 100.77675,77.4552 C88.40205,65.1534 81.45,48.4689 81.45,31.0719 L81.45,0 L112.7064,0 C128.7615,0.0525483 144.2439,5.93442 156.2424,16.53942 C168.2406,27.14445 175.9278,41.742 177.8586,57.5865 C186.9291,48.1275 197.8347,40.5951 209.9163,35.4444 C221.9982,30.2937 235.005,27.6318 248.1507,27.61935 L248.1507,55.2387 C231.9294,55.1832 216.2001,60.7731 203.691,71.0391 Z"
               id="path0_fill"
@@ -118,7 +129,7 @@ module HomeNew = {
               fill="#FFFFFF"
             />
           </svg>
-          <h2 className="App__subtitle">
+          <h2 className="Home__subtitle">
             /*
              * In ReactRe, we have to wrap all of our strings with a ReactRe.stringToElement
              * function.
@@ -126,9 +137,9 @@ module HomeNew = {
              (ReactRe.stringToElement "NYC's ReasonML Meetup") </h2>
         </div>
       <div className="Wrapper Wrapper--lg">
-        <div className="App__cta App__section">
+        <div className="Home__cta Home__section">
           <h2> (ReactRe.stringToElement "Join us at our monthly meetup") </h2>
-          <p className="App__intro lead">
+          <p className="Home__intro lead">
             <a href="https://facebook.github.io/reason" target="_blank" rel="noopener">
               (ReactRe.stringToElement "ReasonML")
             </a>
@@ -154,15 +165,59 @@ module HomeNew = {
           </div>
         </div>
       </div>
-      <div className="App__events App__section">
+      <div className="Home__events Home__section">
         <div className="Wrapper Wrapper--lg">
-          <h2> (ReactRe.stringToElement "Upcoming Events") </h2>
-          <ul className="App__events-list"> (ReactRe.arrayToElement events) </ul>
+          <h2> (ReactRe.stringToElement "June Reason Meetup") </h2>
+          <div className="EventDetails">
+            <div>
+            <div className="EventDetails__meta">
+              <div className="EventDetails__metaItem">
+                <div className="EventDetails__metaItemIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="transparent" stroke="#dd4b39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                </div>
+                <div className="EventDetails__metaItemContent">
+                  (ReactRe.stringToElement "The Farm SoHo, 447 Broadway 2nd floor, New York, NY 10013")
+                </div>
+              </div>
+            </div>
+            <div className="EventDetails__meta">
+              <div className="EventDetails__metaItem">
+                <div className="EventDetails__metaItemIcon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dd4b39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                      <line x1="16" y1="2" x2="16" y2="6"/>
+                      <line x1="8" y1="2" x2="8" y2="6"/>
+                      <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                </div>
+                <div className="EventDetails__metaItemContent">
+                  (ReactRe.stringToElement "Tuesday, June 20, 2017, 6:45 PM ET") 
+                </div>
+              </div>
+            </div>
+            </div>
+            <div className="EventDetails__cta">
+              <a className="Button Button--primary" href="https://www.meetup.com/ReasonML-NYC/events/240243714/" target="_blank" rel="noopener">(ReactRe.stringToElement "RSVP Now") </a>  
+            </div>
+          </div>
+          <section style=(
+                ReactDOMRe.Style.make
+                 
+                  marginTop::"3rem"
+                  ())>
+             <h2> (ReactRe.stringToElement "Speakers") </h2>
+            <div className="Speakers">
+              (ReactRe.listToElement speakerList)
+            </div>
+          </section>
         </div>
       </div>
-      <div className="App__sponsors App__section">
+      <div className="Home__sponsors Home__section">
         <div className="Wrapper Wrapper--sm">
-          <h2 className="App__section-title--small"> (ReactRe.stringToElement "Sponsored by") </h2>
+          <h2 className="Home__section-title--small"> (ReactRe.stringToElement "Sponsored by") </h2>
           <a href="https://www.shellypalmer.com" target="_blank" rel="noopener">
             <svg width="96px" height="120px" viewBox="0 0 1163 1442">
               <g id="Final" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -186,10 +241,10 @@ module HomeNew = {
           </a>
         </div>
       </div>
-      <div className="App__signup App__section">
+      <div className="Home__signup Home__section">
         <div className="Wrapper Wrapper--md">
           <h2> (ReactRe.stringToElement "Stay Tuned") </h2>
-          <p className="App__intro lead">
+          <p className="Home__intro lead">
             (
               ReactRe.stringToElement "Get reminders and event information about ReasonML NYC events straight to your inbox."
             )
@@ -221,7 +276,7 @@ module HomeNew = {
           </form>
         </div>
       </div>
-      <div className="App__footer App__section">
+      <div className="Home__footer Home__section">
         <div className="Wrapper Wrapper--sm">
           <a href="https://github.com/reasonmlnyc" target="_blank" rel="noopener">
             (ReactRe.stringToElement "GitHub")
@@ -251,10 +306,10 @@ module HomeNew = {
           </div>
         </div>
       </div>
-    </div>
+    </div>;
   };
 };
 
-include ReactRe.CreateComponent HomeNew;
+include ReactRe.CreateComponent Home;
 
 let createElement ::events => wrapProps {events: events};

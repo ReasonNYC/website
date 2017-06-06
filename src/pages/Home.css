@@ -1,16 +1,16 @@
-.App {
+.Home {
   text-align: center;
 }
 
-.App__section {
+.Home__section {
   padding: 3rem 0 4rem;
 }
 
-.App__section-title--small {
+.Home__section-title--small {
   margin: 0 auto 2rem;
 }
 
-.App__header {
+.Home__header {
   margin: 0 auto;
   background: #F6F4F4;
   border-bottom: solid 1px #e7e7e7;
@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.App__logo {
+.Home__logo {
   margin: 0 auto;
   position: relative;
   z-index: 400;
@@ -28,7 +28,7 @@
   padding: 0 1rem;
 }
 
-.App__subtitle {
+.Home__subtitle {
   color: #999;
   position: relative;
   margin: 1rem auto 0;
@@ -37,32 +37,37 @@
   font-weight: 400;
 }
 
-.App__intro {
-  margin: 0 1rem 1rem; 
+.Home__intro {
+  margin: 0 1rem 1rem;
 }
 
-.App__events {
+.Home__events {
+  text-align: left;
   background: #fbfafa;
   border-bottom: solid 1px #e7e7e7;
   border-top: solid 1px #e7e7e7;
 }
 
-.App__events-list {
+.Home__events  h2 {
+  text-align: center;
+}
+
+.Home__events-list {
   list-style: none;
   padding: 0;
   text-align: left;
 }
 
-.App__footer {
+.Home__footer {
   background: #444;
   color: #e2e1e1;
 }
 
-.App__footer a {
+.Home__footer a {
   color: #e2e1e1;
 }
 
-.App__signup {
+.Home__signup {
   border-top: solid 1px #e7e7e7;
   background: #F6F4F4;
 }
@@ -81,7 +86,7 @@ label {
   padding: 8px 16px;
   font-size: 16px;
   background: #fff;
-  -webkit-appearance: none;
+  -webkit-Homeearance: none;
 }
 
 .EmailSignup {
@@ -101,5 +106,59 @@ label {
     margin-bottom: 0;
     max-width: 550px;
     width: calc(100% - 210px);
+  }
+}
+
+.Speakers {
+  text-align: center;
+}
+
+.EventDetails {
+  margin-top: 2rem;
+}
+.EventDetails__meta {
+  margin-bottom: 1rem;
+}
+
+.EventDetails__meta:last-of-type {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 40rem) {
+  .EventDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .EventDetails__meta:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.EventDetails__metaItem {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+}
+
+.EventDetails__metaItemIcon {
+  color: transparent;
+  display: inline-block;
+  margin-right: .5rem;
+}
+
+.EventDetails__metaItemContent {
+  flex: 1;
+  font-weight: 500;
+}
+
+.EventDetails__cta {
+  text-align: center;
+}
+
+@media only screen and (min-width: 40rem) {
+  .EventDetails__cta {
+    text-align: right;
   }
 }

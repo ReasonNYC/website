@@ -1,0 +1,47 @@
+.Speaker {
+  margin-bottom: 3rem;
+}
+
+.Speaker:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 40rem) {
+  .Speaker {
+    margin-bottom: 0;
+  }
+  .Speakers {
+    display: flex;
+    flex-flow: row-wrap;
+    justify-content: space-between;
+  }
+}
+
+.Speaker__avatar {
+  height: 128px;
+  width: 128px;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, .02);
+  border-radius: 64px;
+  margin-bottom: .5rem;
+}
+
+.Speaker__name {
+  font-weight: bold;
+  font-size: 1.25rem;
+  font-family: Montserrat;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.Speaker__company {
+  margin-bottom: .25rem;
+}
+
+.Speaker__icons > a {
+  margin-right: 1rem;
+}
+
+.Speaker__icons > a:last-of-type {
+  margin-right: 0;
+}

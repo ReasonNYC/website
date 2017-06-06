@@ -1,9 +1,10 @@
 .Button {
   box-sizing: border-box;
-  
   border-radius: 4px;
   padding: 12px 24px;
   line-height: 1;
+  text-align: center;
+  display: inline-block;
   text-decoration: none;
   outline: none;
   border: 0;
@@ -55,4 +56,8 @@
 
 .Button--inEmailSignup {
   float: right;
+}
+
+.Button--block {
+  display: block;
 }
