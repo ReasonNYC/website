@@ -14,15 +14,15 @@ let speakers: list speaker = [
     name: "Jared Palmer",
     company: "The Palmer Group",
     avatar: "https://pbs.twimg.com/profile_images/662984079638405120/Y6oncSaf.jpg",
-    twitter: "jaredpalmer",
-    github: "jaredpalmer",
+    twitter: "https://twitter.com/jaredpalmer",
+    github: "https://github.com/jaredpalmer",
     linkedin: ""
   }, {
     name: "Ken Wheeler",
     company: "Formidable Labs",
     avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkiAAAAJDYzNzQ1NWFiLWYwYzQtNDZmNi1iZDBlLWYxNWExMTBkMTYzYQ.jpg",
-    twitter: "ken_wheeler",
-    github: "kenwheeler",
+    twitter: "https://twitter.com/ken_wheeler",
+    github: "https://github.com/kenwheeler",
     linkedin: ""
   }, {
     name: "Maxime Ransan",
@@ -30,7 +30,7 @@ let speakers: list speaker = [
     avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/07b/1e4/380bc25.jpg",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/maxime-ransan-90b139b/",
-    github: "mransan"
+    github: "https://github.com/mransan"
   }
 ];
 /**
