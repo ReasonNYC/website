@@ -10,7 +10,7 @@ import path from 'path';
 import { renderToString } from 'react-dom/server';
 import serialize from 'serialize-javascript';
 
-// const App = require('../lib/js/src/app').component;
+const App = require('../lib/js/src/app').comp;
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -23,28 +23,13 @@ server
   .use(hpp())
   .use(compression())
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
-  .get('/*', async function renderApp(req, res) {
-    /*try {
-      const context = {};
-      const { data } = await axios.get(
-        'https://api.meetup.com/ReasonML-NYC/events?photo-host=secure&page=20&sig_id=118784732&sig=b5941528d2ee47f1de6d00684f7fc2100efa252b'
-      );
-      const events = data.map(e => ({
-        title: e.name,
-        description: e.description,
-        time: e.time,
-        link: e.link,
-        id: e.id,
-        venue: `${e.venue.name}, ${e.venue.address_1}, ${e.venue.city}, ${e
-          .venue.state} ${e.venue.zip}`,
-        lat: e.venue.lat,
-        lon: e.venue.lon,
-      }));
-      const markup = renderToString(
-        <StaticRouter context={context} location={req.url}>
-          <App />
-        </StaticRouter>
-      );*/
+  .get('/*', (req, res) => {
+    let context = {};
+    const markup = renderToString(
+      <StaticRouter context={context} location={req.url}>
+        <App />
+      </StaticRouter>
+    );
     res.send(
       `<!doctype html>
     <html lang="en">
@@ -100,14 +85,11 @@ server
         <script src="${assets.client.js}" defer></script>
     </head>
     <body>
-        <div id="root">${''}</div>
-        <script>window.__DATA__ = "hello";</script>
+        <div id="root">${markup}</div>
+        <script>window.__DATA__ = ${serialize({})};</script>
     </body>
 </html>`
     );
-    // } catch (e) {
-    //   console.log(e);
-    // }
   });
 
 export default server;
