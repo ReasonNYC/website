@@ -1,8 +1,11 @@
 let component = ReasonReact.statelessComponent "App";
 
 let make _ => {
-  ...component, /* spread the template's other defaults into here  */
-  render: fun () _ => <div> <Home /> </div>
+  ...component,
+  render: fun () _ => {
+    let renderHomeRoute _ => <Home />;
+    <RRRoute path="/" component=(renderHomeRoute) exact=true />
+  }
 };
 
 let jsPropsToReason _ => make [||];
