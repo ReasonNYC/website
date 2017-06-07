@@ -1,42 +1,35 @@
-module Speaker = {
-  include ReactRe.Component;
-  type props = {
-    name: string,
-    avatar: string,
-    company: string,
-    github: string,
-    twitter: string,
-    linkedin: string
-  };
-  let name = "Speaker";
-  let render {props} => {
-    let twitter = 
-      switch (props.twitter) {
+let component = ReasonReact.statelessComponent "Speaker";
+
+let make ::name ::avatar ::company ::github ::twitter ::linkedin _children => {
+  ...component,
+  render: fun () _ => {
+     let twitter = 
+      switch (twitter) {
       | "" => ReactRe.nullElement
       | _ =>
-        <TwitterIcon href=props.twitter />
+        <TwitterIcon href=twitter />
       };
     let github = 
-      switch (props.github) {
+      switch (github) {
       | "" => ReactRe.nullElement
       | _ =>
-        <GithubIcon href=props.github />
+        <GithubIcon href=github />
       };
     let linkedin = 
-      switch (props.linkedin) {
+      switch (linkedin) {
       | "" => ReactRe.nullElement
       | _ =>
-        <LinkedinIcon href=props.linkedin />
+        <LinkedinIcon href=linkedin />
       };
    <div className="Speaker">
     <img
       className="Speaker__avatar"
-      src=props.avatar
-      alt=props.name
+      src=avatar
+      alt=name
     />
-    <div className="Speaker__name"> (ReactRe.stringToElement props.name) </div>
+    <div className="Speaker__name"> (ReactRe.stringToElement name) </div>
     <div className="Speaker__company">
-      (ReactRe.stringToElement props.company)
+      (ReactRe.stringToElement company)
     </div>
     <div className="Speaker__icons">
       github 
@@ -44,9 +37,5 @@ module Speaker = {
       twitter
     </div>
   </div>
-  };
+  }
 };
-
-include ReactRe.CreateComponent Speaker;
-
-let createElement ::name ::avatar ::company ::github ::twitter ::linkedin => wrapProps {avatar, name, company, github, twitter, linkedin};

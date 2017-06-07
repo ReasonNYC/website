@@ -1099,9 +1099,9 @@ bs-jest@^0.1.0:
   dependencies:
     jest "^19.0.2"
 
-bs-platform@^1.7.3:
-  version "1.7.4"
-  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-1.7.4.tgz#495f529ff509f01eb554cd499d4008283e737aed"
+"bs-platform@https://github.com/bloomberg/bucklescript":
+  version "1.7.5"
+  resolved "https://github.com/bloomberg/bucklescript#fcc4831d03e1b2e908d7733a6c3b1ce69b37c0ef"
 
 bs-react-test-renderer@^1.0.0:
   version "1.0.0"
@@ -4780,9 +4780,9 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-"reason-react@https://github.com/reasonml/reason-react.git":
-  version "0.1.3"
-  resolved "https://github.com/reasonml/reason-react.git#be300064ab0ad2c66ed4e47f7fea58496c3735a4"
+"reason-react@https://github.com/SanderSpies/react-on-reason.git":
+  version "1.0.0"
+  resolved "https://github.com/SanderSpies/react-on-reason.git#345da6dd7e1370428d8d8af5b2119651af35e39e"
 
 recursive-readdir@2.2.1:
   version "2.2.1"

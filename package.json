@@ -23,13 +23,13 @@
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.1.1",
-    "reason-react": "https://github.com/reasonml/reason-react.git",
+    "reason-react": "https://github.com/SanderSpies/react-on-reason.git",
     "sanitize.css": "^5.0.0",
     "serialize-javascript": "^1.3.0"
   },
   "devDependencies": {
     "bs-jest": "^0.1.0",
-    "bs-platform": "^1.7.3",
+    "bs-platform": "https://github.com/bloomberg/bucklescript",
     "bs-react-test-renderer": "^1.0.0",
     "jest": "^20.0.4",
     "razzle": "^0.6.3",
