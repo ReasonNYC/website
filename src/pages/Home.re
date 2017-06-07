@@ -1,5 +1,3 @@
-open Event;
-
 type speaker = {
   name: string,
   avatar: string,
@@ -9,7 +7,7 @@ type speaker = {
   linkedin: string
 };
 
-let speakers: list speaker = [
+let speakers: array speaker = [|
   {
     name: "Jared Palmer",
     company: "The Palmer Group",
@@ -17,7 +15,8 @@ let speakers: list speaker = [
     twitter: "https://twitter.com/jaredpalmer",
     github: "https://github.com/jaredpalmer",
     linkedin: ""
-  }, {
+  },
+  {
     name: "Ken Wheeler",
     company: "Formidable Labs",
     avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkiAAAAJDYzNzQ1NWFiLWYwYzQtNDZmNi1iZDBlLWYxNWExMTBkMTYzYQ.jpg",
@@ -25,19 +24,16 @@ let speakers: list speaker = [
     github: "https://github.com/kenwheeler",
     linkedin: ""
   }
-];
-/**
- * Not Used, just for an example.
- * This is Stateless Functional Component equivalent that is just for CSS.
- */
-module Home = {
-  include ReactRe.Component;
-  let name = "Home";
-  type props = {events: array event};
-  let render {props} => {
-     let speakerList =
+|];
+
+let component = ReasonReact.statelessComponent "Home";
+
+let make _children => {
+  ...component, /* spread the template's other defaults into here  */
+  render: fun () _self => {
+    let speakerList =
         speakers |>
-          List.map (
+          Array.map (
             fun s =>
               <Speaker 
                 key=s.company
@@ -203,7 +199,7 @@ module Home = {
                   ())>
              <h2> (ReactRe.stringToElement "Speakers") </h2>
             <div className="Speakers">
-              (ReactRe.listToElement speakerList)
+              (ReactRe.arrayToElement speakerList)
             </div>
           </section>
         </div>
@@ -299,10 +295,6 @@ module Home = {
           </div>
         </div>
       </div>
-    </div>;
-  };
+    </div>
+  }
 };
-
-include ReactRe.CreateComponent Home;
-
-let createElement ::events => wrapProps {events: events};

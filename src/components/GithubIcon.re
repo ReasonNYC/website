@@ -1,9 +1,9 @@
-module GithubIcon = {
-  include ReactRe.Component;
-  type props = {href: string};
-  let name = "GithubIcon";
-  let render {props} =>
-    <a href=props.href target="_blank" rel="noopener">
+let component = ReasonReact.statelessComponent "GithubIcon";
+
+let make ::href _children => {
+  ...component, /* spread the template's other defaults into here  */
+  render: fun () _ =>
+    <a href target="_blank" rel="noopener">
       <svg
         className="Icon Icon--github"
         viewBox="0 0 33 32"
@@ -17,9 +17,5 @@ module GithubIcon = {
           </g>
         </g>
       </svg>
-    </a>;
+    </a>
 };
-
-include ReactRe.CreateComponent GithubIcon;
-
-let createElement ::href => wrapProps {href: href};

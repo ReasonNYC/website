@@ -10,7 +10,7 @@ import path from 'path';
 import { renderToString } from 'react-dom/server';
 import serialize from 'serialize-javascript';
 
-const App = require('../lib/js/src/app').comp;
+// const App = require('../lib/js/src/app').component;
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -24,7 +24,7 @@ server
   .use(compression())
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .get('/*', async function renderApp(req, res) {
-    try {
+    /*try {
       const context = {};
       const { data } = await axios.get(
         'https://api.meetup.com/ReasonML-NYC/events?photo-host=secure&page=20&sig_id=118784732&sig=b5941528d2ee47f1de6d00684f7fc2100efa252b'
@@ -35,17 +35,18 @@ server
         time: e.time,
         link: e.link,
         id: e.id,
-        venue: `${e.venue.name}, ${e.venue.address_1}, ${e.venue.city}, ${e.venue.state} ${e.venue.zip}`,
+        venue: `${e.venue.name}, ${e.venue.address_1}, ${e.venue.city}, ${e
+          .venue.state} ${e.venue.zip}`,
         lat: e.venue.lat,
         lon: e.venue.lon,
       }));
       const markup = renderToString(
         <StaticRouter context={context} location={req.url}>
-          <App events={events} />
+          <App />
         </StaticRouter>
-      );
-      res.send(
-        `<!doctype html>
+      );*/
+    res.send(
+      `<!doctype html>
     <html lang="en">
     <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -93,18 +94,20 @@ server
 
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-        ${assets.client.css ? `<link rel="stylesheet" href="${assets.client.css}">` : ''}
+        ${assets.client.css
+          ? `<link rel="stylesheet" href="${assets.client.css}">`
+          : ''}
         <script src="${assets.client.js}" defer></script>
     </head>
     <body>
-        <div id="root">${markup}</div>
-        <script>window.__DATA__ = ${serialize({ events })};</script>
+        <div id="root">${''}</div>
+        <script>window.__DATA__ = "hello";</script>
     </body>
 </html>`
-      );
-    } catch (e) {
-      console.log(e);
-    }
+    );
+    // } catch (e) {
+    //   console.log(e);
+    // }
   });
 
 export default server;

@@ -1,14 +1,6 @@
-/**
- * Not Used, just for an example.
- * This is Stateless Functional Component equivalent that is just for CSS.
- */
-module About = {
-  include ReactRe.Component;
-  let name = "About";
-  type props = unit;
-  let render _ => <div> (ReactRe.stringToElement "About") </div>;
+let component = ReasonReact.statelessComponent "About";
+
+let make _ => {
+  ...component, /* spread the template's other defaults into here  */
+  render: fun () _self => <div> (ReasonReact.stringToElement "About") </div>
 };
-
-include ReactRe.CreateComponent About;
-
-let createElement = wrapProps ();

@@ -18,7 +18,7 @@ const initialState = window.__DATA__;
 
 render(
   <BrowserRouter>
-    <App {...initialState} />
+    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );

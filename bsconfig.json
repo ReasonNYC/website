@@ -5,15 +5,11 @@
 {
   "name": "razzle-reason",
   "reason": {
-    "react-jsx": true
+    "react-jsx": 2
   },
   "bs-dependencies": [
     "reason-react",
     "bs-director"
-  ],
-  "bs-dev-dependencies": [
-    "bs-jest",
-    "bs-react-test-renderer"
   ],
   "sources": [
     {
