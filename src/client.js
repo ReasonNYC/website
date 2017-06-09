@@ -3,7 +3,6 @@ import './global.css';
 import './components/Wrapper.css';
 import './components/Icon.css';
 import './components/Button.css';
-import './components/EventItem.css';
 import './components/Speaker.css';
 import './pages/Home.css';
 
