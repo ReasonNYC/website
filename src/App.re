@@ -4,7 +4,7 @@ let make _ => {
   ...component,
   render: fun () _ => {
     let renderHomeRoute _ => <Home />;
-    <RRRoute path="/" component=(renderHomeRoute) exact=true />
+    <RRRoute path="/" component=renderHomeRoute exact=true />
   }
 };
 

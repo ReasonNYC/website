@@ -28,7 +28,7 @@ a:hover {
 h1, h2, h3 {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-family: Montserrat;
+  font-family: Montserrat, -apple-system, "SF UI", Roboto, "Helvetica Neue";
   padding-bottom: 0;
   text-transform: uppercase;
   color: #505050;

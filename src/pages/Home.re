@@ -23,6 +23,14 @@ let speakers: array speaker = [|
     twitter: "https://twitter.com/ken_wheeler",
     github: "https://github.com/kenwheeler",
     linkedin: ""
+  },
+  {
+    name: "Max Ransan",
+    company: "Instagram",
+    avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/4/005/07b/1e4/380bc25.jpg",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/maxime-ransan-90b139b/",
+    github: "https://github.com/mransan"
   }
 |];
 
@@ -32,20 +40,19 @@ let make _children => {
   ...component, /* spread the template's other defaults into here  */
   render: fun () _self => {
     let speakerList =
-        speakers |>
-          Array.map (
-            fun s =>
-              <Speaker 
-                key=s.company
-                avatar=s.avatar
-                company=s.company
-                name=s.name
-                linkedin=s.linkedin
-                github=s.github
-                twitter=s.twitter
-              />
-          );
-
+      speakers |>
+      Array.map (
+        fun s =>
+          <Speaker
+            key=s.company
+            avatar=s.avatar
+            company=s.company
+            name=s.name
+            linkedin=s.linkedin
+            github=s.github
+            twitter=s.twitter
+          />
+      );
     <div className="Home">
       <div className="Home__header Home__section">
         /*<ParticlesRe show=true />*/
@@ -159,54 +166,76 @@ let make _children => {
           <h2> (ReactRe.stringToElement "June Reason Meetup") </h2>
           <div className="EventDetails">
             <div>
-            <div className="EventDetails__meta">
-              <div className="EventDetails__metaItem">
-                <div className="EventDetails__metaItemIcon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="transparent" stroke="#dd4b39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                      <circle cx="12" cy="10" r="3"/>
-                  </svg>
-                </div>
-                <div className="EventDetails__metaItemContent">
-                  (ReactRe.stringToElement "The Farm SoHo, 447 Broadway 2nd floor, New York, NY 10013")
-                </div>
-              </div>
-            </div>
-            <div className="EventDetails__meta">
-              <div className="EventDetails__metaItem">
-                <div className="EventDetails__metaItemIcon">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dd4b39" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                      <line x1="16" y1="2" x2="16" y2="6"/>
-                      <line x1="8" y1="2" x2="8" y2="6"/>
-                      <line x1="3" y1="10" x2="21" y2="10"/>
-                  </svg>
-                </div>
-                <div className="EventDetails__metaItemContent">
-                  (ReactRe.stringToElement "Tuesday, June 20, 2017, 6:45 PM ET") 
+              <div className="EventDetails__meta">
+                <div className="EventDetails__metaItem">
+                  <div className="EventDetails__metaItemIcon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="transparent"
+                      stroke="#dd4b39"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                  </div>
+                  <div className="EventDetails__metaItemContent">
+                    (
+                      ReactRe.stringToElement "The Farm SoHo, 447 Broadway 2nd floor, New York, NY 10013"
+                    )
+                  </div>
                 </div>
               </div>
-            </div>
+              <div className="EventDetails__meta">
+                <div className="EventDetails__metaItem">
+                  <div className="EventDetails__metaItemIcon">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#dd4b39"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                      <line x1="16" y1="2" x2="16" y2="6" />
+                      <line x1="8" y1="2" x2="8" y2="6" />
+                      <line x1="3" y1="10" x2="21" y2="10" />
+                    </svg>
+                  </div>
+                  <div className="EventDetails__metaItemContent">
+                    (ReactRe.stringToElement "Tuesday, June 20, 2017, 6:45 PM ET")
+                  </div>
+                </div>
+              </div>
             </div>
             <div className="EventDetails__cta">
-              <a className="Button Button--primary" href="https://www.meetup.com/ReasonML-NYC/events/240243714/" target="_blank" rel="noopener">(ReactRe.stringToElement "RSVP Now") </a>  
+              <a
+                className="Button Button--primary"
+                href="https://www.meetup.com/ReasonML-NYC/events/240243714/"
+                target="_blank"
+                rel="noopener">
+                (ReactRe.stringToElement "RSVP Now")
+              </a>
             </div>
           </div>
-          <section style=(
-                ReactDOMRe.Style.make
-                 
-                  marginTop::"3rem"
-                  ())>
-             <h2> (ReactRe.stringToElement "Speakers") </h2>
-            <div className="Speakers">
-              (ReactRe.arrayToElement speakerList)
-            </div>
+          <section style=(ReactDOMRe.Style.make marginTop::"3rem" ())>
+            <h2> (ReactRe.stringToElement "Speakers") </h2>
+            <div className="Speakers"> (ReactRe.arrayToElement speakerList) </div>
           </section>
         </div>
       </div>
       <div className="Home__sponsors Home__section">
         <div className="Wrapper Wrapper--sm">
-          <h2 className="Home__section-title--small"> (ReactRe.stringToElement "Sponsored by") </h2>
+          <h2 className="Home__section-title--small">
+            (ReactRe.stringToElement "Sponsored by")
+          </h2>
           <a href="https://www.shellypalmer.com" target="_blank" rel="noopener">
             <svg width="96px" height="120px" viewBox="0 0 1163 1442">
               <g id="Final" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
