@@ -18,7 +18,7 @@ let speakers: array speaker = [|
   },
   {
     name: "Bob Zhang",
-    company: "Bloomberg",
+    company: "Creator of BuckleScript",
     avatar: "https://pbs.twimg.com/profile_images/3157941111/cf58e90adce60b796f589b2ae5a0394a_400x400.jpeg",
     twitter: "https://twitter.com/bobzhang1988",
     github: "https://github.com/bobzhang",
@@ -45,7 +45,7 @@ let speakers: array speaker = [|
 let component = ReasonReact.statelessComponent "Home";
 
 let make _children => {
-  ...component, /* spread the template's other defaults into here  */
+  ...component,
   render: fun () _self => {
     let speakerList =
       speakers |>
@@ -65,7 +65,6 @@ let make _children => {
       <div className="Home__header Home__section">
         /*<ParticlesRe show=true />*/
         /* SVG's just work */
-
           <svg className="Home__logo" viewBox="0 0 1050 402">
             <path
               d="M203.691,71.0391 C191.1816,81.3054 182.6814,95.6001 179.6643,111.444 C189.4152,143.7867 144.8553,135.3798 151.881,111.306 C152.538,106.3587 153.5592,101.4663 154.9371,96.6678 L147.4356,96.6678 C129.9351,96.6678 113.1516,89.7567 100.77675,77.4552 C88.40205,65.1534 81.45,48.4689 81.45,31.0719 L81.45,0 L112.7064,0 C128.7615,0.0525483 144.2439,5.93442 156.2424,16.53942 C168.2406,27.14445 175.9278,41.742 177.8586,57.5865 C186.9291,48.1275 197.8347,40.5951 209.9163,35.4444 C221.9982,30.2937 235.005,27.6318 248.1507,27.61935 L248.1507,55.2387 C231.9294,55.1832 216.2001,60.7731 203.691,71.0391 Z"
