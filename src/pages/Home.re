@@ -17,11 +17,11 @@ let speakers: array speaker = [|
     linkedin: ""
   },
   {
-    name: "Ken Wheeler",
-    company: "Formidable Labs",
-    avatar: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkiAAAAJDYzNzQ1NWFiLWYwYzQtNDZmNi1iZDBlLWYxNWExMTBkMTYzYQ.jpg",
-    twitter: "https://twitter.com/ken_wheeler",
-    github: "https://github.com/kenwheeler",
+    name: "Bob Zhang",
+    company: "Bloomberg",
+    avatar: "https://pbs.twimg.com/profile_images/3157941111/cf58e90adce60b796f589b2ae5a0394a_400x400.jpeg",
+    twitter: "https://twitter.com/bobzhang1988",
+    github: "https://github.com/bobzhang",
     linkedin: ""
   },
   {
@@ -31,6 +31,14 @@ let speakers: array speaker = [|
     twitter: "",
     linkedin: "https://www.linkedin.com/in/maxime-ransan-90b139b/",
     github: "https://github.com/mransan"
+  },
+  {
+    name: "Peggy Rayzis",
+    company: "Major League Soccer",
+    avatar: "https://pbs.twimg.com/profile_images/783341508820893696/JphRM0xk_400x400.jpg",
+    twitter: "https://twitter.com/peggyrayzis",
+    linkedin: "",
+    github: "https://github.com/peggyrayzis"
   }
 |];
 
@@ -226,7 +234,7 @@ let make _children => {
             </div>
           </div>
           <section style=(ReactDOMRe.Style.make marginTop::"3rem" ())>
-            <h2> (ReactRe.stringToElement "Speakers") </h2>
+            <h2> (ReactRe.stringToElement "Speakers / Panelists") </h2>
             <div className="Speakers"> (ReactRe.arrayToElement speakerList) </div>
           </section>
         </div>

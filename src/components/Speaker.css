@@ -1,5 +1,5 @@
 .Speaker {
-  margin-bottom: 3rem;
+  margin: 0 .5rem 2rem;
 }
 
 .Speaker:last-of-type {
