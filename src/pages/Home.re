@@ -285,7 +285,7 @@ let make _children => {
              * is syntactically invalid. So we use `<input _type=".." />` instead.
              *
              * @see https://github.com/reasonml/reason-react/blob/master/documentation.md#invalid-prop-name
-             * @see http://bloomberg.github.io/bucklescript/Manual.html#_object_label_translation_convention
+             * @see http://bucklescript.github.io/bucklescript/Manual.html#_object_label_translation_convention
              */
             <input
               _type="email"
