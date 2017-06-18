@@ -6,7 +6,7 @@
     "dev": "npm run js-watch | npm run bsb-watch",
     "test": "jest",
     "js-watch": "razzle start",
-    "bsb-watch": "bsb -make-world -w",
+    "bsb-watch": "bsb -make-world -w 2>&1 | berror --path-to-refmttype  /usr/local/bin/refmt",
     "clean": "bsb -clean-world && rm -rf build",
     "build": "bsb -make-world && razzle build",
     "start": "NODE_ENV=production node build/server.js"
@@ -32,6 +32,7 @@
     "bs-platform": "https://github.com/bloomberg/bucklescript",
     "bs-react-test-renderer": "^1.0.0",
     "jest": "^20.0.4",
+    "ocamlBetterErrors": "^0.1.1",
     "razzle": "^0.6.3",
     "sw-precache-webpack-plugin": "^0.9.2"
   },
