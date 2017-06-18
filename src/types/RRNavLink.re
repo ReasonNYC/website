@@ -4,7 +4,7 @@ let make
     _to::(_to: string)
     activeClassName::(activeClassName: option string)=?
     className::(className: option string)=? =>
-  ReasonReact.wrapJsComponentForReason
+  ReasonReact.wrapJsForReason
     reactClass::navLink
     props::{
       "activeClassName": Js.Null_undefined.from_opt activeClassName,

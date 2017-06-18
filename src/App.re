@@ -8,6 +8,4 @@ let make _ => {
   }
 };
 
-let jsPropsToReason _ => make [||];
-
-let comp = ReasonReact.createJsReactClass ::jsPropsToReason component;
+let comp = ReasonReact.wrapReasonForJs ::component (fun _ => make [||]);
