@@ -77,7 +77,8 @@ server
         <meta name="twitter:description" content="We are the ReasonML community in NYC">
         <meta name="twitter:image" content="https://reason.nyc/twitter_card.png">
 
-
+        <meta name="google-site-verification" content="HybV-uz0nBNE_kOtoiUvW2I4b2GCE43SDwk-w86rgsM" />
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
         ${assets.client.css
           ? `<link rel="stylesheet" href="${assets.client.css}">`
