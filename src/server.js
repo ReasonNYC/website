@@ -1,6 +1,5 @@
 import React from 'react';
 import StaticRouter from 'react-router-dom/StaticRouter';
-import axios from 'axios';
 import compression from 'compression';
 import express from 'express';
 import helmet from 'helmet';
@@ -39,7 +38,7 @@ server
         <title>ReasonML NYC</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="We are the ReasonML community in NYC">
-        <meta name="keywords" content="reason,reasonml,react,new york,nyc,2017,red badger,facebook">
+        <meta name="keywords" content="reason,reasonml,react,new york,nyc,2017,the palmer group,facebook">
         <link rel="shortcut icon" href="/favicon.ico">
         
         <meta name="theme-color" content="#dd4b39">
