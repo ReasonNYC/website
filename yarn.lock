@@ -2,88 +2,6 @@
 # yarn lockfile v1
 
 
-"@opam-alpha/conf-m4@*":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/conf-m4/-/conf-m4-4.1.0.tgz#91500bb3c9c9ca790731671035a5beb0664e0ce8"
-  dependencies:
-    conf-m4-actual "git://github.com/npm-opam/conf-m4.git#4.1.0"
-
-"@opam-alpha/cppo@*":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/cppo/-/cppo-1.4.1.tgz#9f06bdedf148e6db8d16ec4043734593d0e8ee65"
-  dependencies:
-    cppo-actual "git://github.com/npm-opam/cppo.git#1.4.1"
-
-"@opam-alpha/jbuilder@>= 1.0.0":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/jbuilder/-/jbuilder-1.0.2.tgz#2977d49eb2ddda4229e87fb6bf50fb47ba29d808"
-  dependencies:
-    jbuilder-actual "git://github.com/npm-opam/jbuilder.git#1.0.02"
-
-"@opam-alpha/menhir@>= 20160303.0.0":
-  version "20160825.0.0"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/menhir/-/menhir-20160825.0.0.tgz#45f638756944bdcf97b95416ccb226b0739d0206"
-  dependencies:
-    menhir-actual "git://github.com/npm-opam/menhir.git#20160825.0.0"
-
-"@opam-alpha/merlin-extend@>= 0.3.0", "@opam-alpha/merlin-extend@^ 0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/merlin-extend/-/merlin-extend-0.3.0.tgz#aceb5adda46a6190a6388bc95744947956524aed"
-  dependencies:
-    merlin-extend-actual "git://github.com/npm-opam/merlin-extend.git#0.3.0"
-
-"@opam-alpha/ocaml-migrate-parsetree@*", "@opam-alpha/ocaml-migrate-parsetree@>= 0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/ocaml-migrate-parsetree/-/ocaml-migrate-parsetree-0.5.0.tgz#5c5497304e646e851df839b3fee2f3048cb4945e"
-  dependencies:
-    ocaml-migrate-parsetree-actual "git://github.com/npm-opam/ocaml-migrate-parsetree.git#0.5.0"
-
-"@opam-alpha/ocaml@4.2.3":
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/ocaml/-/ocaml-4.2.3.tgz#44c6e23fbb716196d4a6121f7751e09c0ad34018"
-  dependencies:
-    ocaml "git+https://github.com/npm-opam/ocaml.git#npm-4.02.3"
-
-"@opam-alpha/ocamlbuild@*":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/ocamlbuild/-/ocamlbuild-0.9.2.tgz#b5d67c1e7bd3be9091333694f045d7725b77851f"
-
-"@opam-alpha/ocamlfind@*", "@opam-alpha/ocamlfind@>= 1.5.0", "@opam-alpha/ocamlfind@>= 1.6.1":
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/ocamlfind/-/ocamlfind-1.6.2.tgz#4fb4c7f3b0b039b786aeaf7efc460c420e90055d"
-  dependencies:
-    ocamlfind-actual "git+https://github.com/npm-opam/ocamlfind.git#1.6.2"
-
-"@opam-alpha/ppx_tools_versioned@= 5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/ppx_tools_versioned/-/ppx_tools_versioned-5.0.0.tgz#b3d045504293d0a3e5d407e80d47157dc2a1fa47"
-  dependencies:
-    ppx_tools_versioned-actual "git://github.com/npm-opam/ppx_tools_versioned.git#5.0.0"
-
-"@opam-alpha/re@*":
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/re/-/re-1.7.1.tgz#6d4542ca6cc3177d57176475f527060153dd690c"
-  dependencies:
-    re-actual "git://github.com/npm-opam/re.git#1.7.1"
-
-"@opam-alpha/reason-parser@1.13.0":
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/reason-parser/-/reason-parser-1.13.0.tgz#f6c1b9334ae04740864d100f91b07e97dae076e8"
-  dependencies:
-    reason-parser-actual "git://github.com/npm-opam/reason-parser.git#1.13.0"
-
-"@opam-alpha/result@*", "@opam-alpha/result@= 1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/result/-/result-1.2.0.tgz#cdb0a208f6c6c0be98748eeedb63a3982ace6f71"
-  dependencies:
-    result-actual "git://github.com/npm-opam/result.git#1.2.0"
-
-"@opam-alpha/topkg@0.8.1", "@opam-alpha/topkg@= 0.8.1":
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/@opam-alpha/topkg/-/topkg-0.8.1.tgz#d0097ba23c791f4169a77fee7895a4ea217fa83b"
-  dependencies:
-    topkg-actual "git://github.com/npm-opam/topkg.git#0.8.1"
-
 "@timer/detect-port@1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@timer/detect-port/-/detect-port-1.1.3.tgz#1383abd67f9a5d683df5276f8a92d60bdf9abb90"
@@ -253,6 +171,10 @@ array-find-index@^1.0.1:
 array-flatten@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-1.1.1.tgz#9a5f699051b1e7073328f2a008968b64ea2955d2"
+
+array-flatten@^2.1.0:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/array-flatten/-/array-flatten-2.1.1.tgz#426bb9da84090c1838d812c8150af20a8331e296"
 
 array-map@~0.0.0:
   version "0.0.0"
@@ -546,10 +468,10 @@ babel-jest@^20.0.3:
     babel-preset-jest "^20.0.3"
 
 babel-loader@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.0.0.tgz#2e43a66bee1fff4470533d0402c8a4532fafbaf7"
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-7.1.0.tgz#3fbf2581f085774bd9642dca9990e6d6c1491144"
   dependencies:
-    find-cache-dir "^0.1.1"
+    find-cache-dir "^1.0.0"
     loader-utils "^1.0.2"
     mkdirp "^0.5.1"
 
@@ -1063,8 +985,19 @@ block-stream@*:
     inherits "~2.0.0"
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
-  version "4.11.6"
-  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.6.tgz#53344adb14617a13f6e8dd2ce28905d1c0ba3215"
+  version "4.11.7"
+  resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.11.7.tgz#ddb048e50d9482790094c13eb3fcfc833ce7ab46"
+
+bonjour@^3.5.0:
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/bonjour/-/bonjour-3.5.0.tgz#8e890a183d8ee9a2393b3844c691a42bcf7bc9f5"
+  dependencies:
+    array-flatten "^2.1.0"
+    deep-equal "^1.0.1"
+    dns-equal "^1.0.0"
+    dns-txt "^2.0.2"
+    multicast-dns "^6.0.1"
+    multicast-dns-service-types "^1.1.0"
 
 boom@2.x.x:
   version "2.10.1"
@@ -1188,9 +1121,9 @@ bs-jest@^0.1.0:
   dependencies:
     jest "^19.0.2"
 
-"bs-platform@https://github.com/bloomberg/bucklescript":
-  version "1.8.0"
-  resolved "https://github.com/bloomberg/bucklescript#a777f879903aeec9559f074c6cf033e366c31656"
+bs-platform@latest:
+  version "1.7.5"
+  resolved "https://registry.yarnpkg.com/bs-platform/-/bs-platform-1.7.5.tgz#21dce7c87a19098cd5e5fd5e0a72ef65e296e7b2"
 
 bs-react-test-renderer@^1.0.0:
   version "1.0.0"
@@ -1209,6 +1142,10 @@ bser@^2.0.0:
   resolved "https://registry.yarnpkg.com/bser/-/bser-2.0.0.tgz#9ac78d3ed5d915804fd87acb158bc797147a1719"
   dependencies:
     node-int64 "^0.4.0"
+
+buffer-indexof@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/buffer-indexof/-/buffer-indexof-1.1.0.tgz#f54f647c4f4e25228baa656a2e57e43d5f270982"
 
 buffer-xor@^1.0.2:
   version "1.0.3"
@@ -1261,14 +1198,6 @@ camelize@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
 
-"camomile-bin@https://github.com/reasonml/camomile-bin":
-  version "0.8.5"
-  resolved "https://github.com/reasonml/camomile-bin#08f5d6115b76d46897af47b9ee8e70a55973b40f"
-  dependencies:
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    nopam "*"
-
 caniuse-api@^1.5.2:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/caniuse-api/-/caniuse-api-1.6.1.tgz#b534e7c734c4f81ec5fbe8aca2ad24354b962c6c"
@@ -1279,12 +1208,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000690"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000690.tgz#ee4e0750070f6aae6f40e76477984449bd6cb48a"
+  version "1.0.30000692"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000692.tgz#3da9a99353adbcea1e142b99f60ecc6216df47a5"
 
 caniuse-lite@^1.0.30000670, caniuse-lite@^1.0.30000684:
-  version "1.0.30000690"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000690.tgz#3b232dbc0cf32bc2a888ec199852a50afa37f5ef"
+  version "1.0.30000692"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000692.tgz#34600fd7152352d85a47f4662a3b51b02d8b646f"
 
 capture-stack-trace@^1.0.0:
   version "1.0.0"
@@ -1457,15 +1386,6 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
-"conf-m4-actual@git://github.com/npm-opam/conf-m4.git#4.1.0":
-  version "4.1.0"
-  resolved "git://github.com/npm-opam/conf-m4.git#75e353ae7ae97a988319ddb0e97ecfa25bce4739"
-  dependencies:
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
-
 configstore@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/configstore/-/configstore-2.1.0.tgz#737a3a7036e9886102aa6099e47bb33ab1aba1a1"
@@ -1560,17 +1480,6 @@ cosmiconfig@^2.1.0, cosmiconfig@^2.1.1:
     os-homedir "^1.0.1"
     parse-json "^2.2.0"
     require-from-string "^1.1.0"
-
-"cppo-actual@git://github.com/npm-opam/cppo.git#1.4.1":
-  version "1.4.1"
-  resolved "git://github.com/npm-opam/cppo.git#f93baf17d8099c5866df939264ddddb6457aa7d2"
-  dependencies:
-    "@opam-alpha/ocamlbuild" "*"
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
 
 create-ecdh@^4.0.0:
   version "4.0.0"
@@ -1784,6 +1693,10 @@ decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
+deep-equal@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
+
 deep-extend@~0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.4.2.tgz#48b699c27e334bf89f10892be432f6e4c7d34a7f"
@@ -1814,6 +1727,17 @@ del@^2.2.2:
     pinkie-promise "^2.0.0"
     rimraf "^2.2.8"
 
+del@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/del/-/del-3.0.0.tgz#53ecf699ffcbcb39637691ab13baf160819766e5"
+  dependencies:
+    globby "^6.1.0"
+    is-path-cwd "^1.0.0"
+    is-path-in-cwd "^1.0.0"
+    p-map "^1.1.1"
+    pify "^3.0.0"
+    rimraf "^2.2.8"
+
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
@@ -1825,18 +1749,6 @@ delegates@^1.0.0:
 depd@1.1.0, depd@~1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.0.tgz#e1bd82c6aab6ced965b97b88b17ed3e528ca18c3"
-
-dependency-env@*:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/dependency-env/-/dependency-env-0.1.1.tgz#ee95e51dba64f82a4f8d368c6591524f054b91b5"
-  dependencies:
-    resolve "^1.1.7"
-
-"dependency-env@https://github.com/npm-ml/dependency-env.git":
-  version "0.1.1"
-  resolved "https://github.com/npm-ml/dependency-env.git#94c75aff3a71587afb570d89bcf2eef7996bb67f"
-  dependencies:
-    resolve "^1.1.7"
 
 des.js@^1.0.0:
   version "1.0.0"
@@ -1875,9 +1787,26 @@ director@^1.2.8:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/director/-/director-1.2.8.tgz#c6d9b4dd890e9aff5365183fe9cc8e73994cf2d5"
 
+dns-equal@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/dns-equal/-/dns-equal-1.0.0.tgz#b39e7f1da6eb0a75ba9c17324b34753c47e0654d"
+
+dns-packet@^1.0.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-1.1.1.tgz#2369d45038af045f3898e6fa56862aed3f40296c"
+  dependencies:
+    ip "^1.1.0"
+    safe-buffer "^5.0.1"
+
 dns-prefetch-control@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/dns-prefetch-control/-/dns-prefetch-control-0.1.0.tgz#60ddb457774e178f1f9415f0cabb0e85b0b300b2"
+
+dns-txt@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/dns-txt/-/dns-txt-2.0.2.tgz#b91d806f5d27188e4ab3e7d107d881a1cc4642b6"
+  dependencies:
+    buffer-indexof "^1.0.0"
 
 dom-urls@^1.1.0:
   version "1.1.0"
@@ -2236,13 +2165,13 @@ finalhandler@1.0.3, finalhandler@~1.0.3:
     statuses "~1.3.1"
     unpipe "~1.0.0"
 
-find-cache-dir@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-0.1.1.tgz#c8defae57c8a52a8a784f9e31c57c742e993a0b9"
+find-cache-dir@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/find-cache-dir/-/find-cache-dir-1.0.0.tgz#9288e3e9e3cc3748717d39eade17cf71fc30ee6f"
   dependencies:
     commondir "^1.0.1"
-    mkdirp "^0.5.1"
-    pkg-dir "^1.0.0"
+    make-dir "^1.0.0"
+    pkg-dir "^2.0.0"
 
 find-up@^1.0.0:
   version "1.1.2"
@@ -2411,6 +2340,16 @@ globby@^5.0.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
+globby@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/globby/-/globby-6.1.0.tgz#f5a6d70e8395e21c858fb0489d64df02424d506c"
+  dependencies:
+    array-union "^1.0.1"
+    glob "^7.0.3"
+    object-assign "^4.0.1"
+    pify "^2.0.0"
+    pinkie-promise "^2.0.0"
+
 got@^5.0.0:
   version "5.7.1"
   resolved "https://registry.yarnpkg.com/got/-/got-5.7.1.tgz#5f81635a61e4a6589f180569ea4e381680a51f35"
@@ -2497,10 +2436,11 @@ hash-base@^2.0.0:
     inherits "^2.0.1"
 
 hash.js@^1.0.0, hash.js@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.0.3.tgz#1332ff00156c0a0ffdd8236013d07b77a0451573"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/hash.js/-/hash.js-1.1.1.tgz#5cb2e796499224e69fd0b00ed01d2d4a16e7a323"
   dependencies:
-    inherits "^2.0.1"
+    inherits "^2.0.3"
+    minimalistic-assert "^1.0.0"
 
 hawk@~3.1.3:
   version "3.1.3"
@@ -2544,8 +2484,8 @@ hide-powered-by@1.0.0:
   resolved "https://registry.yarnpkg.com/hide-powered-by/-/hide-powered-by-1.0.0.tgz#4a85ad65881f62857fc70af7174a1184dccce32b"
 
 history@^4.5.1, history@^4.6.0:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/history/-/history-4.6.2.tgz#716e863e1da0e97a028eed6da644061dd1e1ed1d"
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/history/-/history-4.6.3.tgz#6d723a8712c581d6bef37e8c26f4aedc6eb86967"
   dependencies:
     invariant "^2.2.1"
     loose-envify "^1.2.0"
@@ -2712,7 +2652,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@~2.0.0, inherits@~2.0.1:
+inherits@2, inherits@2.0.3, inherits@^2.0.1, inherits@^2.0.3, inherits@~2.0.0, inherits@~2.0.1, inherits@~2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
@@ -2742,6 +2682,12 @@ inquirer@3.0.6:
     strip-ansi "^3.0.0"
     through "^2.3.6"
 
+internal-ip@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/internal-ip/-/internal-ip-1.2.0.tgz#ae9fbf93b984878785d50a8de1b356956058cf5c"
+  dependencies:
+    meow "^3.3.0"
+
 interpret@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.0.3.tgz#cbc35c62eeee73f19ab7b10a801511401afc0f90"
@@ -2755,6 +2701,10 @@ invariant@^2.2.0, invariant@^2.2.1, invariant@^2.2.2:
 invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
+
+ip@^1.1.0:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
 
 ipaddr.js@1.3.0:
   version "1.3.0"
@@ -3017,15 +2967,6 @@ istanbul-reports@^1.1.1:
   resolved "https://registry.yarnpkg.com/istanbul-reports/-/istanbul-reports-1.1.1.tgz#042be5c89e175bc3f86523caab29c014e77fee4e"
   dependencies:
     handlebars "^4.0.3"
-
-"jbuilder-actual@git://github.com/npm-opam/jbuilder.git#1.0.02":
-  version "1.0.2"
-  resolved "git://github.com/npm-opam/jbuilder.git#1ba5e02d493fc3acd34eeb5c7497773a7d772a1a"
-  dependencies:
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
 
 jest-changed-files@^19.0.2:
   version "19.0.2"
@@ -3563,17 +3504,6 @@ kind-of@^4.0.0:
   dependencies:
     is-buffer "^1.1.5"
 
-"lambda-term-bin@https://github.com/reasonml/lambda-term-bin":
-  version "1.10.0"
-  resolved "https://github.com/reasonml/lambda-term-bin#72137b68f22af1fd2d1e52afbb02ff45b494908a"
-  dependencies:
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    lwt-bin "https://github.com/reasonml/lwt-bin"
-    nopam "*"
-    react-bin "https://github.com/reasonml/react-bin"
-    zed-bin "https://github.com/reasonml/zed-bin"
-
 latest-version@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/latest-version/-/latest-version-2.0.0.tgz#56f8d6139620847b8017f8f1f4d78e211324168b"
@@ -3825,18 +3755,15 @@ lru-cache@^4.0.1, lru-cache@^4.0.2:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-"lwt-bin@https://github.com/reasonml/lwt-bin":
-  version "2.5.2"
-  resolved "https://github.com/reasonml/lwt-bin#96859b56091d3b46d3c36e80522a137bb768fee5"
-  dependencies:
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    nopam "*"
-    react-bin "https://github.com/reasonml/react-bin"
-
 macaddress@^0.2.8:
   version "0.2.8"
   resolved "https://registry.yarnpkg.com/macaddress/-/macaddress-0.2.8.tgz#5904dc537c39ec6dbefeae902327135fa8511f12"
+
+make-dir@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.0.0.tgz#97a011751e91dd87cfadef58832ebb04936de978"
+  dependencies:
+    pify "^2.3.0"
 
 makeerror@1.0.x:
   version "1.0.11"
@@ -3863,18 +3790,7 @@ memory-fs@^0.4.0, memory-fs@~0.4.1:
     errno "^0.1.3"
     readable-stream "^2.0.1"
 
-"menhir-actual@git://github.com/npm-opam/menhir.git#20160825.0.0":
-  version "20160825.0.0"
-  resolved "git://github.com/npm-opam/menhir.git#8d6905e8eeb4bedcec501a14fdc7a7d950f85874"
-  dependencies:
-    "@opam-alpha/ocamlbuild" "*"
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
-
-meow@^3.7.0:
+meow@^3.3.0, meow@^3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/meow/-/meow-3.7.0.tgz#72cb668b425228290abbfa856892587308a801fb"
   dependencies:
@@ -3896,17 +3812,6 @@ merge-descriptors@1.0.1:
 merge@^1.1.3:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
-
-"merlin-extend-actual@git://github.com/npm-opam/merlin-extend.git#0.3.0":
-  version "0.3.0"
-  resolved "git://github.com/npm-opam/merlin-extend.git#8d01d124db27f46a27e04f25d0e1c54bab0d0f48"
-  dependencies:
-    "@opam-alpha/cppo" "*"
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
 
 methods@~1.1.2:
   version "1.1.2"
@@ -4011,6 +3916,17 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
+multicast-dns-service-types@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz#899f11d9686e5e05cb91b35d5f0e63b773cfc901"
+
+multicast-dns@^6.0.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/multicast-dns/-/multicast-dns-6.1.1.tgz#6e7de86a570872ab17058adea7160bbeca814dde"
+  dependencies:
+    dns-packet "^1.0.1"
+    thunky "^0.1.0"
+
 mute-stream@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
@@ -4037,6 +3953,10 @@ node-fetch@^1.0.1:
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
+
+node-forge@0.6.33:
+  version "0.6.33"
+  resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.6.33.tgz#463811879f573d45155ad6a9f43dc296e8e85ebc"
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -4097,14 +4017,6 @@ node-status-codes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/node-status-codes/-/node-status-codes-1.0.0.tgz#5ae5541d024645d32a58fcddc9ceecea7ae3ac2f"
 
-nopam@*:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/nopam/-/nopam-0.1.0.tgz#a727efd0a80ec3ec93acb7aa3a7ac8990ec8759e"
-
-"nopam@https://github.com/yunxing/nopam.git":
-  version "0.1.0"
-  resolved "https://github.com/yunxing/nopam.git#7cd19f068ac9aaf75010cd6961f7c65c779a1d4a"
-
 nopt@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/nopt/-/nopt-4.0.1.tgz#d0d4685afd5415193c8c7505602d0d17cd64474d"
@@ -4164,8 +4076,8 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
 
 "nwmatcher@>= 1.3.9 < 2.0.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/nwmatcher/-/nwmatcher-1.4.0.tgz#b4389362170e7ef9798c3c7716d80ebc0106fccf"
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/nwmatcher/-/nwmatcher-1.4.1.tgz#7ae9b07b0ea804db7e25f05cb5fe4097d4e4949f"
 
 oauth-sign@~0.8.1:
   version "0.8.2"
@@ -4185,40 +4097,6 @@ object.omit@^2.0.0:
 obuf@^1.0.0, obuf@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.1.tgz#104124b6c602c6796881a042541d36db43a5264e"
-
-"ocaml-migrate-parsetree-actual@git://github.com/npm-opam/ocaml-migrate-parsetree.git#0.5.0":
-  version "0.5.0"
-  resolved "git://github.com/npm-opam/ocaml-migrate-parsetree.git#4bd4c57673a7a0df5c79089507adf61c943c3a28"
-  dependencies:
-    "@opam-alpha/jbuilder" ">= 1.0.0"
-    "@opam-alpha/ocamlfind" "*"
-    "@opam-alpha/result" "*"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
-
-"ocaml@git+https://github.com/npm-opam/ocaml.git#npm-4.02.3":
-  version "4.2.3"
-  resolved "git+https://github.com/npm-opam/ocaml.git#0bb98be8e5233a02282ed8de0c8965677ddbde33"
-
-ocamlBetterErrors@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/ocamlBetterErrors/-/ocamlBetterErrors-0.1.1.tgz#1998ffff171927a36d692b94daf496a0ad126796"
-  dependencies:
-    "@opam-alpha/re" "*"
-    dependency-env "*"
-    nopam "*"
-    reason "^1.9.0"
-
-"ocamlfind-actual@git+https://github.com/npm-opam/ocamlfind.git#1.6.2":
-  version "1.6.2"
-  resolved "git+https://github.com/npm-opam/ocamlfind.git#f6ea48c7628210d477ead863d32feba2357b9afe"
-  dependencies:
-    "@opam-alpha/conf-m4" "*"
-    "@opam-alpha/ocaml" "4.2.3"
-    dependency-env "*"
-    nopam "*"
 
 on-finished@~2.3.0:
   version "2.3.0"
@@ -4241,21 +4119,6 @@ onetime@^2.0.0:
   resolved "https://registry.yarnpkg.com/onetime/-/onetime-2.0.1.tgz#067428230fd67443b2794b22bba528b6867962d4"
   dependencies:
     mimic-fn "^1.0.0"
-
-"opam-installer-bin@git+https://github.com/yunxing/opam-installer-bin.git":
-  version "0.0.0"
-  resolved "git+https://github.com/yunxing/opam-installer-bin.git#689ede681217f76fb2f82a9f4528e192a5b543ba"
-  dependencies:
-    dependency-env "https://github.com/npm-ml/dependency-env.git"
-    nopam "https://github.com/yunxing/nopam.git"
-
-"opam-installer-bin@https://github.com/yunxing/opam-installer-bin.git":
-  version "0.0.0"
-  uid "689ede681217f76fb2f82a9f4528e192a5b543ba"
-  resolved "https://github.com/yunxing/opam-installer-bin.git#689ede681217f76fb2f82a9f4528e192a5b543ba"
-  dependencies:
-    dependency-env "https://github.com/npm-ml/dependency-env.git"
-    nopam "https://github.com/yunxing/nopam.git"
 
 opn@4.0.2:
   version "4.0.2"
@@ -4449,6 +4312,10 @@ pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
+pify@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/pify/-/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
+
 pinkie-promise@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pinkie-promise/-/pinkie-promise-2.0.1.tgz#2135d6dfa7a358c069ac9b178776288228450ffa"
@@ -4459,11 +4326,11 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
-pkg-dir@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-1.0.0.tgz#7a4b508a8d5bb2d629d447056ff4e9c9314cf3d4"
+pkg-dir@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pkg-dir/-/pkg-dir-2.0.0.tgz#f6d5d1109e19d63edf428e0bd57e12777615334b"
   dependencies:
-    find-up "^1.0.0"
+    find-up "^2.1.0"
 
 platform@1.3.3:
   version "1.3.3"
@@ -4761,17 +4628,6 @@ postcss@^6.0.1, postcss@^6.0.2:
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-"ppx_tools_versioned-actual@git://github.com/npm-opam/ppx_tools_versioned.git#5.0.0":
-  version "5.0.0"
-  resolved "git://github.com/npm-opam/ppx_tools_versioned.git#26459b24f731053e34eab96535bfd265b67406af"
-  dependencies:
-    "@opam-alpha/ocaml-migrate-parsetree" ">= 0.5.0"
-    "@opam-alpha/ocamlfind" ">= 1.5.0"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
-
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -4814,8 +4670,8 @@ process@^0.11.0:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
 
 promise@^7.1.1:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.0.tgz#e7feec5aa87a2cbb81acf47d9a3adbd9d4642d7b"
+  version "7.3.1"
+  resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   dependencies:
     asap "~2.0.3"
 
@@ -4951,25 +4807,6 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-"re-actual@git://github.com/npm-opam/re.git#1.7.1":
-  version "1.7.1"
-  resolved "git://github.com/npm-opam/re.git#42b8753253512c7c3d00af042fd73f6c3b757ef8"
-  dependencies:
-    "@opam-alpha/ocamlbuild" "*"
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
-
-"react-bin@https://github.com/reasonml/react-bin":
-  version "1.2.2"
-  resolved "https://github.com/reasonml/react-bin#b9868712a9e76af9de52e726912bdd99f9a66e87"
-  dependencies:
-    "@opam-alpha/ocamlfind" "*"
-    dependency-env "*"
-    nopam "*"
-
 react-dev-utils@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-3.0.0.tgz#3677f37718ba0cae892ba9c01fe54d1622e6ef7c"
@@ -5084,14 +4921,14 @@ read-pkg@^1.0.0:
     path-type "^1.0.0"
 
 readable-stream@^2.0.0, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.2.6, readable-stream@^2.2.9:
-  version "2.2.11"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.11.tgz#0796b31f8d7688007ff0b93a8088d34aa17c0f72"
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.1.tgz#84e26965bb9e785535ed256e8d38e92c69f09d10"
   dependencies:
     core-util-is "~1.0.0"
-    inherits "~2.0.1"
+    inherits "~2.0.3"
     isarray "~1.0.0"
     process-nextick-args "~1.0.6"
-    safe-buffer "~5.0.1"
+    safe-buffer "~5.1.0"
     string_decoder "~1.0.0"
     util-deprecate "~1.0.1"
 
@@ -5104,44 +4941,11 @@ readdirp@^2.0.0:
     readable-stream "^2.0.2"
     set-immediate-shim "^1.0.1"
 
-"reason-parser-actual@git://github.com/npm-opam/reason-parser.git#1.13.0":
-  version "1.13.0"
-  resolved "git://github.com/npm-opam/reason-parser.git#870e5edc6b692da7a41861b33f5923a6c7dd4d2a"
-  dependencies:
-    "@opam-alpha/menhir" ">= 20160303.0.0"
-    "@opam-alpha/merlin-extend" ">= 0.3.0"
-    "@opam-alpha/ocaml-migrate-parsetree" "*"
-    "@opam-alpha/ocamlfind" "*"
-    "@opam-alpha/ppx_tools_versioned" "= 5.0.0"
-    "@opam-alpha/result" "= 1.2.0"
-    "@opam-alpha/topkg" "= 0.8.1"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
-
 reason-react@0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/reason-react/-/reason-react-0.1.4.tgz#f8f2be8d2112a433376784aea782f4693b271494"
   dependencies:
     create-react-class "^15.0.0"
-
-reason@^1.9.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/reason/-/reason-1.13.0.tgz#42b0631a590a67c7ffebd67741d2d0f5c0c65cc2"
-  dependencies:
-    "@opam-alpha/menhir" ">= 20160303.0.0"
-    "@opam-alpha/merlin-extend" "^ 0.3.0"
-    "@opam-alpha/ocaml" "4.2.3"
-    "@opam-alpha/ocaml-migrate-parsetree" "*"
-    "@opam-alpha/ocamlfind" "*"
-    "@opam-alpha/reason-parser" "1.13.0"
-    "@opam-alpha/result" "*"
-    "@opam-alpha/topkg" "0.8.1"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    utop-bin "https://github.com/reasonml/utop-bin"
 
 recursive-readdir@2.2.1:
   version "2.2.1"
@@ -5305,7 +5109,7 @@ resolve@1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.1.7.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
 
-resolve@^1.1.7, resolve@^1.2.0, resolve@^1.3.2:
+resolve@^1.2.0, resolve@^1.3.2:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.3.3.tgz#655907c3469a8680dc2de3a275a8fdd69691f0e5"
   dependencies:
@@ -5317,15 +5121,6 @@ restore-cursor@^2.0.0:
   dependencies:
     onetime "^2.0.0"
     signal-exit "^3.0.2"
-
-"result-actual@git://github.com/npm-opam/result.git#1.2.0":
-  version "1.2.0"
-  resolved "git://github.com/npm-opam/result.git#4d1f6b57414dd336a37b8fad935bf7a9a78c884b"
-  dependencies:
-    dependency-env "https://github.com/npm-ml/dependency-env.git"
-    nopam "https://github.com/yunxing/nopam.git"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
 
 right-align@^0.1.1:
   version "0.1.3"
@@ -5356,7 +5151,7 @@ rx@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-safe-buffer@^5.0.1, safe-buffer@^5.1.0:
+safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@~5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.0.tgz#fe4c8460397f9eaaaa58e73be46273408a45e223"
 
@@ -5405,6 +5200,12 @@ schema-utils@^0.3.0:
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
+
+selfsigned@^1.9.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/selfsigned/-/selfsigned-1.9.1.tgz#cdda4492d70d486570f87c65546023558e1dfa5a"
+  dependencies:
+    node-forge "0.6.33"
 
 semver-diff@^2.0.0:
   version "2.1.0"
@@ -5750,10 +5551,6 @@ style-loader@^0.17.0:
   dependencies:
     loader-utils "^1.0.2"
 
-"substs@https://github.com/yunxing/substs.git":
-  version "0.0.1"
-  resolved "https://github.com/yunxing/substs.git#d173c906e696d96a59fbbedce6a62de581763e96"
-
 supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
@@ -5857,6 +5654,10 @@ through@^2.3.6:
   version "2.3.8"
   resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
+thunky@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/thunky/-/thunky-0.1.0.tgz#bf30146824e2b6e67b0f2d7a4ac8beb26908684e"
+
 timed-out@^3.0.0:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-3.1.3.tgz#95860bfcc5c76c277f8f8326fd0f5b2e20eba217"
@@ -5884,18 +5685,6 @@ to-arraybuffer@^1.0.0:
 to-fast-properties@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-1.0.3.tgz#b83571fa4d8c25b82e231b06e3a3055de4ca1a47"
-
-"topkg-actual@git://github.com/npm-opam/topkg.git#0.8.1":
-  version "0.8.1"
-  resolved "git://github.com/npm-opam/topkg.git#cc72e5dd23a9e0985074fbd954fa1c63eeb31c1a"
-  dependencies:
-    "@opam-alpha/ocamlbuild" "*"
-    "@opam-alpha/ocamlfind" ">= 1.6.1"
-    "@opam-alpha/result" "*"
-    dependency-env "*"
-    nopam "*"
-    opam-installer-bin "https://github.com/yunxing/opam-installer-bin.git"
-    substs "https://github.com/yunxing/substs.git"
 
 tough-cookie@^2.3.2, tough-cookie@~2.3.0:
   version "2.3.2"
@@ -6054,18 +5843,6 @@ utils-merge@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.0.tgz#0294fb922bb9375153541c4f7096231f287c8af8"
 
-"utop-bin@git+https://github.com/reasonml/utop-bin.git":
-  version "1.19.2"
-  resolved "git+https://github.com/reasonml/utop-bin.git#5e9e322c1f264c0d9e8abb9f85e5472de1c8147d"
-  dependencies:
-    "@opam-alpha/ocamlfind" "*"
-    camomile-bin "https://github.com/reasonml/camomile-bin"
-    dependency-env "*"
-    lambda-term-bin "https://github.com/reasonml/lambda-term-bin"
-    lwt-bin "https://github.com/reasonml/lwt-bin"
-    nopam "*"
-    react-bin "https://github.com/reasonml/react-bin"
-
 uuid@^2.0.1, uuid@^2.0.2:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-2.0.3.tgz#67e2e863797215530dff318e5bf9dcebfd47b21a"
@@ -6153,18 +5930,22 @@ webpack-dev-middleware@^1.10.2:
     range-parser "^1.0.3"
 
 webpack-dev-server@^2.4.5:
-  version "2.4.5"
-  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.4.5.tgz#31384ce81136be1080b4b4cde0eb9b90e54ee6cf"
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.5.0.tgz#4d36a728b03b8b2afa48ed302428847cea2840ad"
   dependencies:
     ansi-html "0.0.7"
+    bonjour "^3.5.0"
     chokidar "^1.6.0"
     compression "^1.5.2"
     connect-history-api-fallback "^1.3.0"
+    del "^3.0.0"
     express "^4.13.3"
     html-entities "^1.2.0"
     http-proxy-middleware "~0.17.4"
+    internal-ip "^1.2.0"
     opn "4.0.2"
     portfinder "^1.0.9"
+    selfsigned "^1.9.1"
     serve-index "^1.7.2"
     sockjs "0.3.18"
     sockjs-client "1.1.2"
@@ -6391,13 +6172,3 @@ yargs@~3.10.0:
     cliui "^2.1.0"
     decamelize "^1.0.0"
     window-size "0.1.0"
-
-"zed-bin@https://github.com/reasonml/zed-bin":
-  version "1.4.0"
-  resolved "https://github.com/reasonml/zed-bin#7d2f0677a4a73c1b51ecbf05589e1f7b5bd76705"
-  dependencies:
-    "@opam-alpha/ocamlfind" "*"
-    camomile-bin "https://github.com/reasonml/camomile-bin"
-    dependency-env "*"
-    nopam "*"
-    react-bin "https://github.com/reasonml/react-bin"

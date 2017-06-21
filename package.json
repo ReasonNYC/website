@@ -29,10 +29,9 @@
   },
   "devDependencies": {
     "bs-jest": "^0.1.0",
-    "bs-platform": "https://github.com/bloomberg/bucklescript",
+    "bs-platform": "latest",
     "bs-react-test-renderer": "^1.0.0",
     "jest": "^20.0.4",
-    "ocamlBetterErrors": "^0.1.1",
     "razzle": "^0.6.3",
     "sw-precache-webpack-plugin": "^0.9.2"
   },
